@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Trade Analyzer | Конкурентная аналитика FunPay</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -72,11 +69,12 @@
             width: 100%;
             height: 2px;
             background: linear-gradient(90deg,
-                    transparent 0%,
-                    rgba(45, 212, 191, 0.15) 15%,
-                    rgba(45, 212, 191, 0.5) 50%,
-                    rgba(45, 212, 191, 0.15) 85%,
-                    transparent 100%);
+                transparent 0%,
+                rgba(45, 212, 191, 0.15) 15%,
+                rgba(45, 212, 191, 0.5) 50%,
+                rgba(45, 212, 191, 0.15) 85%,
+                transparent 100%
+            );
         }
 
         .hero-divider-dot {
@@ -94,29 +92,15 @@
         }
 
         @keyframes dotPulseHero {
-            0% {
-                transform: translateX(-50%) scale(1);
-                opacity: 0.8;
-                box-shadow: 0 0 10px rgba(45, 212, 191, 0.8), 0 0 20px rgba(45, 212, 191, 0.4);
-            }
-
-            50% {
-                transform: translateX(-50%) scale(1.5);
-                opacity: 1;
-                box-shadow: 0 0 18px rgba(45, 212, 191, 1), 0 0 32px rgba(45, 212, 191, 0.6);
-            }
-
-            100% {
-                transform: translateX(-50%) scale(1);
-                opacity: 0.8;
-                box-shadow: 0 0 10px rgba(45, 212, 191, 0.8), 0 0 20px rgba(45, 212, 191, 0.4);
-            }
+            0% { transform: translateX(-50%) scale(1); opacity: 0.8; box-shadow: 0 0 10px rgba(45, 212, 191, 0.8), 0 0 20px rgba(45, 212, 191, 0.4); }
+            50% { transform: translateX(-50%) scale(1.5); opacity: 1; box-shadow: 0 0 18px rgba(45, 212, 191, 1), 0 0 32px rgba(45, 212, 191, 0.6); }
+            100% { transform: translateX(-50%) scale(1); opacity: 0.8; box-shadow: 0 0 10px rgba(45, 212, 191, 0.8), 0 0 20px rgba(45, 212, 191, 0.4); }
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .logo-cyan {
@@ -192,13 +176,8 @@
         }
 
         @keyframes shimmer {
-            0% {
-                left: -100%;
-            }
-
-            100% {
-                left: 100%;
-            }
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
         .live-dot {
@@ -212,17 +191,8 @@
         }
 
         @keyframes chipPulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.35;
-                transform: scale(0.75);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(0.75); }
         }
 
         .live-text {
@@ -247,11 +217,12 @@
             max-width: 500px;
             height: 1px;
             background: linear-gradient(90deg,
-                    transparent,
-                    rgba(45, 212, 191, 0.25) 20%,
-                    rgba(45, 212, 191, 0.4) 50%,
-                    rgba(45, 212, 191, 0.25) 80%,
-                    transparent);
+                transparent,
+                rgba(45, 212, 191, 0.25) 20%,
+                rgba(45, 212, 191, 0.4) 50%,
+                rgba(45, 212, 191, 0.25) 80%,
+                transparent
+            );
         }
 
         .card-separator-diamond {
@@ -261,7 +232,7 @@
             border-radius: 50%;
             position: absolute;
             box-shadow: 0 0 8px rgba(45, 212, 191, 0.6);
-            animation: dotPulse 2s infinite;
+            animation: chipPulse 2s infinite;
         }
 
         /* ========== КАРТОЧКИ КОНКУРЕНТОВ ========== */
@@ -309,7 +280,6 @@
             line-height: 1.2;
         }
 
-        /* Бейджи — все в едином стиле Лидера */
         .badge {
             padding: 0.35rem 1rem;
             font-size: 0.68rem;
@@ -340,7 +310,6 @@
             color: #2DD4BF;
         }
 
-        /* Рейтинг в плашке — 2 строки, выровнен */
         .rating-block {
             display: flex;
             align-items: center;
@@ -353,7 +322,7 @@
             text-transform: uppercase;
             color: #5EEAD4;
             letter-spacing: 0.6px;
-            text-align: center;
+            text-align: right;
             line-height: 1.25;
         }
 
@@ -456,8 +425,8 @@
             background: linear-gradient(135deg, rgba(26, 38, 58, 0.95), rgba(14, 22, 36, 0.98));
             border-color: rgba(45, 212, 191, 0.4);
             box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(45, 212, 191, 0.1) inset,
-                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+                        0 0 0 1px rgba(45, 212, 191, 0.1) inset,
+                        inset 0 1px 0 rgba(255, 255, 255, 0.03);
         }
 
         .ai-header {
@@ -516,9 +485,9 @@
         .verdict-title i {
             color: #2DD4BF;
             -webkit-text-fill-color: #2DD4BF;
+            margin-right: 2px;
         }
 
-        /* Доминант рынка — 2 строки, выровнен */
         .verdict-dominant {
             display: flex;
             align-items: center;
@@ -531,7 +500,7 @@
             text-transform: uppercase;
             color: #5EEAD4;
             letter-spacing: 0.6px;
-            text-align: center;
+            text-align: right;
             line-height: 1.25;
         }
 
@@ -613,26 +582,22 @@
             color: #E2E8F0;
             margin-bottom: 0.35rem;
         }
-
         .insight-content p,
         .insight-content ul {
             font-size: 0.85rem;
             line-height: 1.55;
             color: #B0BEC5;
         }
-
         .insight-content ul {
             list-style: none;
             padding: 0;
         }
-
         .insight-content ul li {
             padding: 0.25rem 0;
             display: flex;
             align-items: baseline;
             gap: 8px;
         }
-
         .insight-content ul li i {
             color: #2DD4BF;
             font-size: 0.65rem;
@@ -670,10 +635,10 @@
             border-radius: 20px;
             padding: 1.2rem 2rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1.2rem;
+            gap: 1.5rem;
             position: relative;
             overflow: hidden;
         }
@@ -686,21 +651,21 @@
             width: 80%;
             height: 1px;
             background: linear-gradient(90deg,
-                    transparent,
-                    rgba(45, 212, 191, 0.2) 30%,
-                    rgba(45, 212, 191, 0.4) 50%,
-                    rgba(45, 212, 191, 0.2) 70%,
-                    transparent);
+                transparent,
+                rgba(45, 212, 191, 0.2) 30%,
+                rgba(45, 212, 191, 0.4) 50%,
+                rgba(45, 212, 191, 0.2) 70%,
+                transparent
+            );
         }
 
-        /* Левая часть */
-        .footer-left {
+        .footer-item-block {
             display: flex;
             align-items: center;
             gap: 0.7rem;
         }
 
-        .footer-icon {
+        .footer-icon-box {
             width: 34px;
             height: 34px;
             background: linear-gradient(135deg, rgba(45, 212, 191, 0.12), rgba(45, 212, 191, 0.03));
@@ -710,2053 +675,1565 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 0 12px rgba(45, 212, 191, 0.2);
+            flex-shrink: 0;
         }
 
-        .footer-icon i {
+        .footer-icon-box i {
             font-size: 15px;
             color: #2DD4BF;
             filter: drop-shadow(0 0 6px rgba(45, 212, 191, 0.5));
         }
 
-        .footer-brand-text h4 {
+        .footer-text h4 {
             font-size: 0.8rem;
             font-weight: 700;
             color: #E2E8F0;
             letter-spacing: -0.1px;
+            margin: 0;
+            line-height: 1.2;
         }
 
-        .footer-brand-text span {
+        .footer-text span {
             font-size: 0.6rem;
             color: #5EEAD4;
             letter-spacing: 0.4px;
-        }
-
-        /* Центр */
-        .footer-center {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .footer-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: rgba(45, 212, 191, 0.06);
-            border: 1px solid rgba(45, 212, 191, 0.15);
-            border-radius: 20px;
-            padding: 0.3rem 0.8rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: #A7F3D0;
-        }
-
-        .footer-dot {
-            width: 6px;
-            height: 6px;
-            background: #A7F3D0;
-            border-radius: 50%;
-            box-shadow: 0 0 6px rgba(167, 243, 208, 0.5);
-            animation: footerPulse 1.8s infinite;
-            flex-shrink: 0;
-        }
-
-        @keyframes footerPulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.35;
-                transform: scale(0.75);
-            }
-        }
-
-        /* Правая часть */
-        .footer-right {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-        }
-
-        .footer-secure-icon {
-            width: 34px;
-            height: 34px;
-            background: linear-gradient(135deg, rgba(45, 212, 191, 0.12), rgba(45, 212, 191, 0.03));
-            border: 1px solid rgba(45, 212, 191, 0.25);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 12px rgba(45, 212, 191, 0.2);
-        }
-
-        .footer-secure-icon i {
-            font-size: 14px;
-            color: #2DD4BF;
-            filter: drop-shadow(0 0 6px rgba(45, 212, 191, 0.5));
-        }
-
-        .footer-secure-text h4 {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #E2E8F0;
-            letter-spacing: -0.1px;
-        }
-
-        .footer-secure-text span {
-            font-size: 0.6rem;
-            color: #5EEAD4;
-            letter-spacing: 0.4px;
-        }
-
-        @media (max-width: 750px) {
-            .footer {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .footer-center {
-                order: 3;
-                width: 100%;
-                justify-content: flex-start;
-            }
+            margin: 0;
+            line-height: 1.2;
+            display: block;
         }
 
         /* ========== АДАПТИВНОСТЬ ========== */
 
-        /* ========== 1024–1399: Ноутбуки ========== */
         @media (max-width: 1399px) {
             .app {
                 padding: 1.5rem 2rem 2.5rem;
             }
-
             .metrics {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 0.9rem;
                 padding: 1.3rem 1.5rem;
             }
-
             .metric-val {
                 font-size: 1.25rem;
             }
-
             .metric-cat {
                 font-size: 0.62rem;
             }
-
             .name {
                 font-size: 1.4rem;
             }
-
             .rating-value-block {
                 font-size: 1.8rem;
                 min-width: 75px;
             }
-
             .verdict-body {
                 padding: 1.3rem 1.5rem;
             }
-
-            #particleCanvas {
-                opacity: 0.9;
-            }
         }
 
-        /* ========== 1024–1199: Маленькие ноутбуки ========== */
         @media (max-width: 1199px) {
             .hero {
                 gap: 1rem;
             }
-
             .title h1 {
                 font-size: 1.7rem;
             }
-
             .card-header {
                 padding: 1.1rem 1.5rem;
             }
-
             .ai {
                 margin: 0 1.5rem 1.5rem 1.5rem;
                 padding: 1rem 1.5rem;
             }
-
             .verdict-top {
                 padding: 1.4rem 1.5rem;
             }
-
             .verdict-title {
                 font-size: 1.3rem;
             }
-
             .footer {
                 padding: 1rem 1.5rem;
             }
         }
 
-        /* ========== 768–1023: Планшеты ========== */
         @media (max-width: 1023px) {
             .app {
                 padding: 1.2rem 1.5rem 2rem;
             }
-
-            /* Херо — центрируем */
             .hero {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                gap: 1rem;
+                gap: 1.2rem;
                 padding-bottom: 1.5rem;
             }
-
+            .hero::after {
+                width: 60%;
+                left: 20%;
+            }
+            .hero-divider-dot {
+                left: 50%;
+                width: 8px;
+                height: 8px;
+            }
             .logo-area {
+                gap: 0.6rem;
                 justify-content: center;
             }
-
+            .logo-cyan {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+            }
+            .logo-cyan i {
+                font-size: 20px;
+            }
             .chip-container {
                 justify-content: center;
                 width: 100%;
             }
-
-            .hero-divider-dot {
-                left: 50%;
-            }
-
-            /* Карточки — рейтинг справа */
             .card-header {
                 padding: 1rem 1.2rem;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
             }
-
-            .rating-block {
-                align-self: center;
-            }
-
             .name {
                 font-size: 1.3rem;
             }
-
             .rating-value-block {
                 font-size: 1.6rem;
                 min-width: 65px;
                 padding: 0.35rem 0.7rem;
             }
-
-            /* Метрики */
             .metrics {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.8rem;
                 padding: 1.2rem 1.2rem;
             }
-
             .metric {
                 padding: 0.9rem;
             }
-
             .metric-val {
                 font-size: 1.2rem;
             }
-
-            /* AI */
             .ai {
                 margin: 0 1.2rem 1.3rem 1.2rem;
                 padding: 1rem 1.2rem;
             }
-
             .ai-text {
                 font-size: 0.82rem;
             }
-
-            /* Вердикт — центрируем */
             .verdict-top {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                gap: 1rem;
-                padding: 1.2rem 1.5rem;
+                gap: 0.8rem;
+                padding: 1.4rem 1.5rem;
             }
-
             .verdict-title {
                 font-size: 1.2rem;
                 justify-content: center;
             }
-
+            .verdict-title i {
+                margin-right: 2px;
+            }
             .verdict-dominant {
+                flex-direction: row;
                 justify-content: center;
+                gap: 0.5rem;
             }
-
             .dominant-label {
-                text-align: center;
+                display: none;
             }
-
-            /* Выравниваем границы заголовка и доминанта */
-            .verdict-title,
-            .verdict-dominant {
-                width: auto;
-                min-width: 280px;
+            .dominant-value {
+                padding: 0.35rem 0.8rem;
             }
-
             .verdict-body {
-                padding: 1rem 1.2rem;
-                gap: 0.9rem;
+                padding: 1.2rem 1.5rem;
+                gap: 1rem;
             }
-
             .insight-tile {
-                padding: 1rem 1.2rem;
+                padding: 1.1rem 1.3rem;
+                gap: 1rem;
             }
-
-            /* Футер */
+            .verdict-outcome {
+                margin-top: 0.3rem;
+            }
             .footer {
                 flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+                justify-content: space-around;
+                align-items: center;
                 gap: 1rem;
-                padding: 1rem 1.5rem;
-                text-align: center;
+                padding: 1rem 1rem;
             }
-
-            .footer-left,
-            .footer-right {
-                justify-content: center;
+            .footer-item-block {
+                gap: 0.5rem;
             }
-
-            /* Частицы — чуть меньше для планшета */
-            #particleCanvas {
-                opacity: 0.75;
+            .footer-text h4 {
+                font-size: 0.7rem;
+                line-height: 1.2;
+            }
+            .footer-text span {
+                font-size: 0.55rem;
+                line-height: 1.2;
             }
         }
 
-        /* ========== 600–767: Фаблеты / горизонтальные телефоны ========== */
         @media (max-width: 767px) {
             .app {
                 padding: 1rem 1rem 1.5rem;
             }
-
             .hero {
-                margin-bottom: 2rem;
                 gap: 0.8rem;
+                margin-bottom: 2rem;
             }
-
+            .hero::after {
+                width: 70%;
+                left: 15%;
+            }
             .logo-cyan {
-                width: 46px;
-                height: 46px;
-                border-radius: 14px;
+                width: 42px;
+                height: 42px;
             }
-
             .logo-cyan i {
-                font-size: 22px;
+                font-size: 18px;
             }
-
             .title h1 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
-
             .title p {
-                font-size: 0.68rem;
+                font-size: 0.65rem;
             }
-
             .live-chip {
-                padding: 0.35rem 0.9rem;
-                font-size: 0.68rem;
-                gap: 7px;
+                padding: 0.32rem 0.8rem;
+                font-size: 0.65rem;
+                gap: 6px;
             }
-
             .live-dot {
                 width: 5px;
                 height: 5px;
             }
-
             .live-text {
-                font-size: 0.65rem;
+                font-size: 0.6rem;
             }
-
             .card {
                 border-radius: 18px;
             }
-
             .card-header {
                 padding: 0.9rem 1rem;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                gap: 0.5rem;
             }
-
             .name {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
             }
-
             .badge {
-                padding: 0.28rem 0.8rem;
-                font-size: 0.62rem;
-                gap: 4px;
+                padding: 0.26rem 0.7rem;
+                font-size: 0.6rem;
             }
-
-            .rating-block {
-                gap: 0.5rem;
-            }
-
-            .rating-label-block {
-                font-size: 0.55rem;
-            }
-
             .rating-value-block {
-                font-size: 1.4rem;
-                min-width: 58px;
-                padding: 0.3rem 0.6rem;
-                border-radius: 10px;
+                font-size: 1.3rem;
+                min-width: 55px;
+                padding: 0.3rem 0.55rem;
             }
-
             .metrics {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.6rem;
                 padding: 0.9rem 1rem;
             }
-
             .metric {
                 padding: 0.75rem;
                 border-radius: 14px;
             }
-
-            .metric i {
-                font-size: 0.85rem;
-                margin-bottom: 0.3rem;
-            }
-
-            .metric-cat {
-                font-size: 0.58rem;
-            }
-
-            .metric-val {
-                font-size: 1.05rem;
-                margin: 0.2rem 0;
-            }
-
-            .metric-note {
-                font-size: 0.58rem;
-                padding-top: 0.3rem;
-                margin-top: 0.15rem;
-            }
-
             .ai {
                 margin: 0 1rem 1rem 1rem;
                 padding: 0.9rem 1rem;
-                border-radius: 14px;
             }
-
-            .ai-header {
-                font-size: 0.75rem;
-            }
-
-            .ai-text {
-                font-size: 0.78rem;
-                line-height: 1.45;
-            }
-
-            .verdict {
-                border-radius: 18px;
-            }
-
             .verdict-top {
-                padding: 1rem 1.2rem;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 0.8rem;
+                padding: 1.1rem 1.3rem;
+                gap: 0.6rem;
             }
-
-            .verdict-title {
-                font-size: 1.1rem;
-                justify-content: center;
-            }
-
-            .verdict-dominant {
-                justify-content: center;
-            }
-
-            .dominant-label {
-                font-size: 0.55rem;
-                text-align: center;
-            }
-
-            .dominant-value {
-                padding: 0.35rem 0.7rem;
-            }
-
-            .dominant-name {
-                font-size: 0.85rem;
-            }
-
-            .dominant-rating {
-                font-size: 1.1rem;
-            }
-
             .verdict-body {
-                padding: 0.8rem 1rem;
-                gap: 0.7rem;
+                padding: 1rem 1.3rem;
+                gap: 0.9rem;
             }
-
             .insight-tile {
-                flex-direction: row;
+                padding: 0.9rem 1.1rem;
                 gap: 0.8rem;
-                padding: 0.9rem 1rem;
-                border-radius: 14px;
             }
-
-            .insight-icon {
-                width: 34px;
-                height: 34px;
-                border-radius: 8px;
-                font-size: 0.85rem;
-                flex-shrink: 0;
-            }
-
-            .insight-content h4 {
-                font-size: 0.8rem;
-            }
-
-            .insight-content p,
-            .insight-content ul {
-                font-size: 0.78rem;
-            }
-
-            .verdict-outcome {
-                padding: 0.8rem 1rem;
-                font-size: 0.78rem;
-                border-radius: 12px;
-            }
-
             .footer {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-around;
                 align-items: center;
-                text-align: center;
-                gap: 0.8rem;
-                padding: 0.9rem 1.2rem;
-                border-radius: 14px;
+                gap: 0.6rem;
+                padding: 0.9rem 0.8rem;
             }
-
-            .footer-center {
-                order: 0;
-                width: auto;
-            }
-
-            .footer-left,
-            .footer-right {
-                justify-content: center;
-            }
-
-            .footer-icon,
-            .footer-secure-icon {
+            .footer-icon-box {
                 width: 28px;
                 height: 28px;
-                border-radius: 7px;
             }
-
-            .footer-icon i,
-            .footer-secure-icon i {
+            .footer-icon-box i {
                 font-size: 12px;
             }
-
-            .footer-brand-text h4,
-            .footer-secure-text h4 {
-                font-size: 0.7rem;
+            .footer-text h4 {
+                font-size: 0.68rem;
+                line-height: 1.2;
             }
-
-            .footer-brand-text span,
-            .footer-secure-text span {
-                font-size: 0.55rem;
-            }
-
-            .footer-badge {
-                padding: 0.25rem 0.6rem;
-                font-size: 0.6rem;
-            }
-
-            .footer-dot {
-                width: 5px;
-                height: 5px;
-            }
-
-            #particleCanvas {
-                opacity: 0.7;
+            .footer-text span {
+                font-size: 0.52rem;
+                line-height: 1.2;
             }
         }
 
-        /* ========== 426–599: Большие телефоны ========== */
         @media (max-width: 599px) {
+            .app {
+                padding: 0.9rem 0.9rem 1.3rem;
+            }
             .hero {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.7rem;
                 padding-bottom: 1.2rem;
             }
-
-            .chip-container {
+            .hero::after {
+                width: 80%;
+                left: 10%;
+            }
+            .hero-divider-dot {
+                width: 7px;
+                height: 7px;
+            }
+            .logo-area {
                 gap: 0.4rem;
             }
-
-            .live-chip {
-                padding: 0.3rem 0.7rem;
-                font-size: 0.62rem;
-                gap: 5px;
+            .logo-cyan {
+                width: 38px;
+                height: 38px;
+                border-radius: 10px;
             }
-
+            .logo-cyan i {
+                font-size: 16px;
+            }
+            .title {
+                text-align: left;
+            }
+            .title h1 {
+                font-size: 1.15rem;
+            }
+            .title p {
+                display: none;
+            }
+            .chip-container {
+                gap: 0.4rem;
+                justify-content: center;
+            }
+            .live-chip {
+                padding: 0.28rem 0.6rem;
+                font-size: 0.6rem;
+                gap: 4px;
+            }
             .live-dot {
                 width: 4px;
                 height: 4px;
             }
-
             .live-text {
-                font-size: 0.6rem;
+                font-size: 0.55rem;
             }
-
-            /* Рейтинг — переносим под имя, делаем встроенным */
             .card-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.6rem;
-            }
-
-            .rating-block {
-                align-self: flex-start;
-                gap: 0.6rem;
-            }
-
-            .rating-value-block {
-                font-size: 1.3rem;
-                min-width: 55px;
-                padding: 0.3rem 0.6rem;
-            }
-
-            /* Метрики — 2 компактные колонки */
-            .metrics {
-                grid-template-columns: 1fr 1fr;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.7rem 0.9rem;
                 gap: 0.5rem;
-                padding: 0.7rem 0.8rem;
             }
-
-            .metric {
-                padding: 0.65rem;
-                border-radius: 12px;
+            .competitor {
+                flex-direction: row;
+                align-items: center;
+                gap: 0.6rem;
             }
-
-            .metric-val {
-                font-size: 0.95rem;
-            }
-
-            .metric-cat {
-                font-size: 0.56rem;
-            }
-
-            .metric-note {
-                font-size: 0.56rem;
-            }
-
             .name {
                 font-size: 1rem;
             }
-
             .badge {
-                padding: 0.22rem 0.6rem;
-                font-size: 0.58rem;
-            }
-
-            /* Вердикт — больше отступов */
-            .verdict-body {
-                padding: 0.9rem 0.9rem;
-                gap: 0.8rem;
-            }
-
-            .insight-tile {
-                padding: 0.8rem 0.9rem;
-                gap: 0.7rem;
-            }
-
-            .insight-icon {
-                align-self: center;
-            }
-
-            /* Футер — собираем */
-            .footer {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.7rem;
-                padding: 0.8rem 1rem;
-            }
-
-            .footer-left,
-            .footer-center,
-            .footer-right {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .footer-badge {
-                font-size: 0.56rem;
-                padding: 0.2rem 0.5rem;
-            }
-
-            #particleCanvas {
-                opacity: 0.65;
-            }
-        }
-
-        /* ========== 376–425: Средние телефоны ========== */
-        @media (max-width: 425px) {
-            .app {
-                padding: 0.8rem 0.7rem 1.2rem;
-            }
-
-            .hero {
-                margin-bottom: 1.8rem;
-                padding-bottom: 1rem;
-                gap: 0.7rem;
-            }
-
-            .logo-cyan {
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
-            }
-
-            .logo-cyan i {
-                font-size: 18px;
-            }
-
-            .title h1 {
-                font-size: 1.2rem;
-            }
-
-            .title p {
-                font-size: 0.6rem;
-            }
-
-            .chip-container {
-                gap: 0.35rem;
-            }
-
-            .live-chip {
-                padding: 0.28rem 0.6rem;
-                font-size: 0.58rem;
-                gap: 4px;
-                border-radius: 40px;
-            }
-
-            .live-dot {
-                width: 4px;
-                height: 4px;
-            }
-
-            .live-text {
+                padding: 0.2rem 0.55rem;
                 font-size: 0.55rem;
             }
-
-            .competitors-list {
-                gap: 1.5rem;
-                margin-bottom: 2rem;
-            }
-
-            .card {
-                border-radius: 14px;
-            }
-
-            .card-header {
-                padding: 0.7rem 0.8rem;
-                gap: 0.5rem;
-            }
-
-            .competitor {
-                gap: 0.5rem;
-            }
-
-            .name {
-                font-size: 0.95rem;
-            }
-
-            .badge {
-                padding: 0.2rem 0.5rem;
-                font-size: 0.55rem;
-                gap: 3px;
-            }
-
-            .badge i {
-                font-size: 0.5rem;
-            }
-
             .rating-block {
                 gap: 0.5rem;
             }
-
-            .rating-label-block {
-                font-size: 0.5rem;
-            }
-
             .rating-value-block {
                 font-size: 1.2rem;
                 min-width: 50px;
                 padding: 0.25rem 0.5rem;
-                border-radius: 8px;
             }
-
-            /* Метрики — 2 колонки, очень компактно */
             .metrics {
                 grid-template-columns: 1fr 1fr;
-                gap: 0.4rem;
-                padding: 0.6rem 0.7rem;
+                gap: 0.5rem;
+                padding: 0.8rem 0.9rem;
             }
-
             .metric {
-                padding: 0.55rem;
-                border-radius: 10px;
+                padding: 0.65rem;
+                border-radius: 12px;
+                background: rgba(15, 23, 42, 0.7);
+                border-color: rgba(45, 212, 191, 0.18);
             }
-
-            .metric i {
-                font-size: 0.7rem;
-            }
-
-            .metric-cat {
-                font-size: 0.52rem;
-            }
-
             .metric-val {
-                font-size: 0.85rem;
+                font-size: 1rem;
+                color: #F8FAFC;
             }
-
+            .metric-cat {
+                font-size: 0.56rem;
+            }
             .metric-note {
-                font-size: 0.5rem;
-                padding-top: 0.25rem;
-                margin-top: 0.1rem;
+                font-size: 0.54rem;
             }
-
             .ai {
-                margin: 0 0.7rem 0.8rem 0.7rem;
-                padding: 0.7rem 0.8rem;
-                border-radius: 10px;
+                margin: 0 0.9rem 1rem 0.9rem;
+                padding: 0.8rem 0.9rem;
             }
-
-            .ai-header {
-                font-size: 0.68rem;
-                gap: 5px;
-            }
-
-            .ai-text {
-                font-size: 0.7rem;
-                line-height: 1.4;
-            }
-
-            /* Вердикт */
-            .verdict {
-                border-radius: 14px;
-            }
-
             .verdict-top {
-                padding: 0.8rem 1rem;
-                gap: 0.7rem;
+                padding: 0.9rem 1rem;
+                gap: 0.5rem;
             }
-
             .verdict-title {
-                font-size: 0.95rem;
-                gap: 6px;
+                font-size: 1rem;
             }
-
-            .verdict-dominant {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.4rem;
+            .verdict-title i {
+                margin-right: 2px;
             }
-
             .dominant-label {
-                font-size: 0.5rem;
-                text-align: center;
+                display: none;
             }
-
             .dominant-value {
                 padding: 0.3rem 0.6rem;
-                border-radius: 8px;
+                gap: 6px;
             }
-
-            .dominant-value i {
-                font-size: 0.65rem;
-            }
-
             .dominant-name {
-                font-size: 0.75rem;
+                font-size: 0.8rem;
             }
-
             .dominant-rating {
-                font-size: 0.95rem;
+                font-size: 1rem;
                 min-width: auto;
             }
-
             .verdict-body {
-                padding: 0.7rem 0.8rem;
+                padding: 0.9rem 1rem;
+                gap: 0.8rem;
+            }
+            .insight-tile {
+                padding: 0.8rem 0.9rem;
                 gap: 0.7rem;
             }
-
-            .insight-tile {
-                flex-direction: row;
-                align-items: flex-start;
-                padding: 0.7rem 0.8rem;
-                border-radius: 10px;
-                gap: 0.6rem;
-            }
-
-            .insight-icon {
-                width: 30px;
-                height: 30px;
-                border-radius: 7px;
-                font-size: 0.7rem;
-                flex-shrink: 0;
-                align-self: center;
-            }
-
-            .insight-content h4 {
-                font-size: 0.72rem;
-            }
-
-            .insight-content p,
-            .insight-content ul {
-                font-size: 0.7rem;
-                line-height: 1.4;
-            }
-
             .verdict-outcome {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.7rem;
-                border-radius: 10px;
-            }
-
-            /* Футер — собран */
-            .footer {
                 padding: 0.7rem 0.9rem;
-                gap: 0.6rem;
-                border-radius: 12px;
-                flex-direction: column;
+                text-align: center;
+            }
+            .footer {
+                flex-wrap: wrap;
+                justify-content: space-around;
                 align-items: center;
+                gap: 0.6rem;
+                padding: 0.8rem 0.7rem;
             }
-
-            .footer-left,
-            .footer-center,
-            .footer-right {
-                width: 100%;
-                justify-content: center;
+            .footer-item-block {
+                gap: 0.4rem;
             }
-
-            .footer-icon,
-            .footer-secure-icon {
+            .footer-icon-box {
                 width: 26px;
                 height: 26px;
-                border-radius: 6px;
             }
-
-            .footer-icon i,
-            .footer-secure-icon i {
+            .footer-icon-box i {
                 font-size: 10px;
             }
-
-            .footer-brand-text h4,
-            .footer-secure-text h4 {
-                font-size: 0.65rem;
+            .footer-text h4 {
+                font-size: 0.6rem;
+                line-height: 1.2;
             }
-
-            .footer-brand-text span,
-            .footer-secure-text span {
-                font-size: 0.5rem;
-            }
-
-            .footer-badge {
-                padding: 0.2rem 0.45rem;
-                font-size: 0.55rem;
-                border-radius: 14px;
-            }
-
-            .footer-dot {
-                width: 4px;
-                height: 4px;
-            }
-
-            #particleCanvas {
-                opacity: 0.6;
+            .footer-text span {
+                font-size: 0.48rem;
+                line-height: 1.2;
             }
         }
 
-        /* ========== 320–375: Маленькие телефоны ========== */
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
             .app {
-                padding: 0.6rem 0.5rem 1rem;
+                padding: 0.7rem 0.6rem 1rem;
             }
-
             .hero {
-                margin-bottom: 1.5rem;
-                padding-bottom: 0.8rem;
                 gap: 0.6rem;
+                padding-bottom: 1rem;
+                margin-bottom: 1.5rem;
             }
-
+            .hero::after {
+                width: 85%;
+                left: 7.5%;
+            }
+            .hero-divider-dot {
+                width: 6px;
+                height: 6px;
+            }
             .logo-cyan {
-                width: 36px;
-                height: 36px;
+                width: 34px;
+                height: 34px;
                 border-radius: 8px;
             }
-
             .logo-cyan i {
-                font-size: 16px;
+                font-size: 14px;
             }
-
             .title h1 {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
-
-            .title p {
-                font-size: 0.55rem;
-            }
-
-            .chip-container {
-                gap: 0.3rem;
-            }
-
             .live-chip {
-                padding: 0.22rem 0.5rem;
-                font-size: 0.52rem;
+                padding: 0.24rem 0.5rem;
+                font-size: 0.55rem;
                 gap: 3px;
             }
-
             .live-dot {
                 width: 3px;
                 height: 3px;
             }
-
             .live-text {
                 font-size: 0.5rem;
-                letter-spacing: 0.3px;
             }
+            .card-header {
+                padding: 0.6rem 0.7rem;
+                gap: 0.4rem;
+            }
+            .competitor {
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .name {
+                font-size: 0.9rem;
+            }
+            .badge {
+                padding: 0.18rem 0.45rem;
+                font-size: 0.5rem;
+                gap: 2px;
+            }
+            .badge i {
+                font-size: 0.45rem;
+            }
+            .rating-block {
+                gap: 0.4rem;
+            }
+            .rating-label-block {
+                font-size: 0.48rem;
+            }
+            .rating-value-block {
+                font-size: 1rem;
+                min-width: 42px;
+                padding: 0.2rem 0.4rem;
+                border-radius: 7px;
+            }
+            .metrics {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.4rem;
+                padding: 0.6rem 0.7rem;
+            }
+            .metric {
+                padding: 0.5rem;
+                border-radius: 10px;
+                background: rgba(20, 30, 50, 0.8);
+                border-color: rgba(45, 212, 191, 0.2);
+            }
+            .metric i {
+                font-size: 0.65rem;
+            }
+            .metric-cat {
+                font-size: 0.5rem;
+            }
+            .metric-val {
+                font-size: 0.85rem;
+                color: #FFFFFF;
+            }
+            .metric-note {
+                font-size: 0.48rem;
+                padding-top: 0.2rem;
+                margin-top: 0.08rem;
+            }
+            .ai {
+                margin: 0 0.7rem 0.8rem 0.7rem;
+                padding: 0.65rem 0.7rem;
+                border-radius: 10px;
+            }
+            .ai-header {
+                font-size: 0.62rem;
+            }
+            .ai-text {
+                font-size: 0.65rem;
+                line-height: 1.35;
+            }
+            .verdict-top {
+                padding: 0.7rem 0.8rem;
+                gap: 0.4rem;
+            }
+            .verdict-title {
+                font-size: 0.85rem;
+                gap: 6px;
+            }
+            .verdict-title i {
+                margin-right: 2px;
+            }
+            .dominant-value {
+                padding: 0.25rem 0.5rem;
+                gap: 5px;
+            }
+            .dominant-name {
+                font-size: 0.7rem;
+            }
+            .dominant-rating {
+                font-size: 0.85rem;
+                min-width: auto;
+            }
+            .verdict-body {
+                padding: 0.7rem 0.8rem;
+                gap: 0.7rem;
+            }
+            .insight-tile {
+                padding: 0.7rem 0.8rem;
+                border-radius: 10px;
+                gap: 0.6rem;
+            }
+            .insight-icon {
+                width: 26px;
+                height: 26px;
+                border-radius: 6px;
+                font-size: 0.6rem;
+            }
+            .insight-content h4 {
+                font-size: 0.65rem;
+                margin-bottom: 0.15rem;
+            }
+            .insight-content p,
+            .insight-content ul {
+                font-size: 0.62rem;
+                line-height: 1.35;
+            }
+            .verdict-outcome {
+                padding: 0.55rem 0.7rem;
+                font-size: 0.62rem;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .verdict-outcome span {
+                display: inline;
+            }
+            .footer {
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                gap: 0.4rem;
+                padding: 0.6rem 0.5rem;
+                border-radius: 12px;
+            }
+            .footer-item-block {
+                gap: 0.3rem;
+            }
+            .footer-icon-box {
+                width: 22px;
+                height: 22px;
+            }
+            .footer-icon-box i {
+                font-size: 8px;
+            }
+            .footer-text h4 {
+                font-size: 0.55rem;
+                line-height: 1.2;
+            }
+            .footer-text span {
+                font-size: 0.42rem;
+                line-height: 1.2;
+            }
+        }
 
+        @media (max-width: 375px) {
+            .app {
+                padding: 0.5rem 0.4rem 0.8rem;
+            }
+            .hero {
+                gap: 0.5rem;
+                padding-bottom: 0.8rem;
+                margin-bottom: 1.2rem;
+            }
+            .hero::after {
+                width: 90%;
+                left: 5%;
+            }
+            .hero-divider-dot {
+                width: 5px;
+                height: 5px;
+                bottom: -3px;
+            }
+            .logo-area {
+                gap: 0.35rem;
+            }
+            .logo-cyan {
+                width: 30px;
+                height: 30px;
+                border-radius: 7px;
+            }
+            .logo-cyan i {
+                font-size: 12px;
+            }
+            .title h1 {
+                font-size: 0.9rem;
+            }
+            .chip-container {
+                gap: 0.25rem;
+            }
+            .live-chip {
+                padding: 0.2rem 0.4rem;
+                font-size: 0.5rem;
+                gap: 3px;
+                border-radius: 30px;
+            }
+            .live-dot {
+                width: 3px;
+                height: 3px;
+            }
+            .live-text {
+                font-size: 0.45rem;
+                letter-spacing: 0.2px;
+            }
             .competitors-list {
                 gap: 1.2rem;
             }
-
             .card {
-                border-radius: 10px;
+                border-radius: 12px;
             }
-
             .card-header {
                 padding: 0.5rem 0.6rem;
                 gap: 0.4rem;
             }
-
             .competitor {
+                flex-direction: row;
+                align-items: center;
                 gap: 0.4rem;
             }
-
             .name {
                 font-size: 0.8rem;
             }
-
             .badge {
-                padding: 0.15rem 0.4rem;
-                font-size: 0.48rem;
+                padding: 0.14rem 0.35rem;
+                font-size: 0.45rem;
                 gap: 2px;
-                border-radius: 30px;
+                border-radius: 25px;
             }
-
             .badge i {
-                font-size: 0.45rem;
+                font-size: 0.4rem;
             }
-
             .rating-block {
-                gap: 0.4rem;
+                gap: 0.3rem;
             }
-
             .rating-label-block {
-                font-size: 0.45rem;
-                letter-spacing: 0.3px;
+                font-size: 0.42rem;
             }
-
             .rating-value-block {
-                font-size: 1rem;
-                min-width: 40px;
-                padding: 0.2rem 0.4rem;
+                font-size: 0.9rem;
+                min-width: 36px;
+                padding: 0.18rem 0.3rem;
                 border-radius: 6px;
             }
-
-            /* Метрики — 2 очень компактные колонки */
             .metrics {
                 grid-template-columns: 1fr 1fr;
                 gap: 0.3rem;
                 padding: 0.5rem 0.6rem;
             }
-
             .metric {
-                padding: 0.45rem;
+                padding: 0.4rem;
                 border-radius: 8px;
+                background: rgba(25, 35, 55, 0.9);
+                border-color: rgba(45, 212, 191, 0.22);
             }
-
             .metric i {
-                font-size: 0.6rem;
-                margin-bottom: 0.2rem;
+                font-size: 0.55rem;
+                margin-bottom: 0.15rem;
             }
-
             .metric-cat {
-                font-size: 0.45rem;
-                letter-spacing: 0.3px;
+                font-size: 0.43rem;
+                letter-spacing: 0.2px;
             }
-
             .metric-val {
                 font-size: 0.75rem;
-                margin: 0.15rem 0;
+                margin: 0.1rem 0;
+                color: #FFFFFF;
             }
-
             .metric-note {
-                font-size: 0.45rem;
-                padding-top: 0.2rem;
-                margin-top: 0.08rem;
+                font-size: 0.42rem;
+                padding-top: 0.15rem;
+                margin-top: 0.06rem;
             }
-
             .ai {
                 margin: 0 0.6rem 0.7rem 0.6rem;
-                padding: 0.6rem 0.7rem;
+                padding: 0.55rem 0.6rem;
                 border-radius: 8px;
                 border-left-width: 3px;
             }
-
             .ai-header {
-                font-size: 0.6rem;
-                gap: 4px;
-                letter-spacing: 0.4px;
+                font-size: 0.55rem;
+                gap: 3px;
+                letter-spacing: 0.3px;
+                margin-bottom: 0.3rem;
             }
-
             .ai-text {
-                font-size: 0.62rem;
-                line-height: 1.35;
+                font-size: 0.58rem;
+                line-height: 1.3;
             }
-
-            /* Вердикт */
             .verdict {
-                border-radius: 10px;
+                border-radius: 12px;
             }
-
             .verdict-top {
                 padding: 0.6rem 0.7rem;
-                gap: 0.5rem;
+                gap: 0.4rem;
             }
-
             .verdict-title {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
                 gap: 5px;
             }
-
             .verdict-title i {
-                font-size: 0.75rem;
+                font-size: 0.6rem;
+                margin-right: 1px;
             }
-
-            .dominant-label {
-                font-size: 0.45rem;
-            }
-
             .dominant-value {
                 padding: 0.2rem 0.4rem;
                 border-radius: 6px;
                 gap: 4px;
             }
-
             .dominant-value i {
-                font-size: 0.55rem;
+                font-size: 0.5rem;
             }
-
             .dominant-name {
-                font-size: 0.65rem;
+                font-size: 0.6rem;
             }
-
             .dominant-rating {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
+                min-width: auto;
             }
-
             .verdict-body {
-                padding: 0.5rem 0.6rem;
-                gap: 0.5rem;
+                padding: 0.6rem 0.7rem;
+                gap: 0.6rem;
             }
-
             .insight-tile {
-                padding: 0.5rem 0.6rem;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0.6rem 0.7rem;
                 border-radius: 8px;
                 gap: 0.5rem;
             }
-
             .insight-icon {
-                width: 24px;
-                height: 24px;
-                border-radius: 5px;
-                font-size: 0.6rem;
-                align-self: center;
+                width: 28px;
+                height: 28px;
+                border-radius: 6px;
+                font-size: 0.65rem;
+                align-self: flex-start;
             }
-
             .insight-content h4 {
-                font-size: 0.62rem;
-                margin-bottom: 0.15rem;
+                font-size: 0.6rem;
+                margin-bottom: 0.12rem;
             }
-
             .insight-content p,
             .insight-content ul {
-                font-size: 0.6rem;
+                font-size: 0.55rem;
                 line-height: 1.3;
             }
-
-            .insight-content ul li {
-                padding: 0.15rem 0;
-            }
-
-            .insight-content ul li i {
-                font-size: 0.5rem;
-            }
-
             .verdict-outcome {
                 padding: 0.5rem 0.6rem;
-                font-size: 0.6rem;
+                font-size: 0.55rem;
                 border-radius: 8px;
-                gap: 6px;
-            }
-
-            .verdict-outcome i {
-                font-size: 0.65rem;
-            }
-
-            /* Футер */
-            .footer {
-                padding: 0.5rem 0.7rem;
+                flex-direction: row;
                 gap: 0.4rem;
+                text-align: center;
+            }
+            .verdict-outcome i {
+                font-size: 0.6rem;
+            }
+            .footer {
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                gap: 0.3rem;
+                padding: 0.5rem 0.4rem;
                 border-radius: 10px;
             }
-
-            .footer-icon,
-            .footer-secure-icon {
-                width: 22px;
-                height: 22px;
-                border-radius: 5px;
-            }
-
-            .footer-icon i,
-            .footer-secure-icon i {
-                font-size: 9px;
-            }
-
-            .footer-brand-text h4,
-            .footer-secure-text h4 {
-                font-size: 0.58rem;
-            }
-
-            .footer-brand-text span,
-            .footer-secure-text span {
-                font-size: 0.45rem;
-            }
-
-            .footer-badge {
-                padding: 0.15rem 0.35rem;
-                font-size: 0.5rem;
-                border-radius: 10px;
+            .footer-item-block {
                 gap: 0.25rem;
             }
-
-            .footer-dot {
-                width: 3px;
-                height: 3px;
+            .footer-icon-box {
+                width: 18px;
+                height: 18px;
+                border-radius: 5px;
             }
-
-            #particleCanvas {
-                opacity: 0.5;
+            .footer-icon-box i {
+                font-size: 7px;
+            }
+            .footer-text h4 {
+                font-size: 0.48rem;
+                line-height: 1.2;
+            }
+            .footer-text span {
+                font-size: 0.38rem;
+                line-height: 1.2;
             }
         }
 
-        /* ========== 320px: Самые маленькие ========== */
         @media (max-width: 320px) {
             .app {
-                padding: 0.4rem 0.35rem 0.8rem;
+                padding: 0.35rem 0.3rem 0.6rem;
             }
-
+            .hero::after {
+                width: 95%;
+                left: 2.5%;
+            }
+            .hero-divider-dot {
+                width: 4px;
+                height: 4px;
+            }
+            .logo-cyan {
+                width: 26px;
+                height: 26px;
+                border-radius: 5px;
+            }
+            .logo-cyan i {
+                font-size: 10px;
+            }
+            .title h1 {
+                font-size: 0.78rem;
+            }
             .chip-container {
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 0.2rem;
             }
-
             .live-chip {
-                padding: 0.18rem 0.4rem;
+                padding: 0.16rem 0.35rem;
+                font-size: 0.45rem;
+                gap: 2px;
+            }
+            .live-dot {
+                width: 2px;
+                height: 2px;
+            }
+            .live-text {
+                font-size: 0.4rem;
+            }
+            .card-header {
+                padding: 0.4rem 0.5rem;
+                gap: 0.3rem;
+            }
+            .competitor {
+                gap: 0.3rem;
+            }
+            .name {
+                font-size: 0.7rem;
+            }
+            .badge {
+                padding: 0.1rem 0.25rem;
+                font-size: 0.4rem;
+            }
+            .badge i {
+                font-size: 0.35rem;
+            }
+            .rating-label-block {
+                font-size: 0.38rem;
+            }
+            .rating-value-block {
+                font-size: 0.75rem;
+                min-width: 30px;
+                padding: 0.12rem 0.25rem;
+            }
+            .metrics {
+                gap: 0.2rem;
+                padding: 0.35rem 0.4rem;
+            }
+            .metric {
+                padding: 0.3rem;
+                border-radius: 6px;
+                background: rgba(30, 40, 60, 0.95);
+                border-color: rgba(45, 212, 191, 0.25);
+            }
+            .metric i {
+                font-size: 0.45rem;
+            }
+            .metric-cat {
+                font-size: 0.38rem;
+            }
+            .metric-val {
+                font-size: 0.65rem;
+                color: #FFFFFF;
+            }
+            .metric-note {
+                font-size: 0.36rem;
+            }
+            .ai {
+                margin: 0 0.4rem 0.5rem 0.4rem;
+                padding: 0.4rem 0.5rem;
+            }
+            .ai-header {
                 font-size: 0.48rem;
             }
-
-            .metrics {
-                gap: 0.25rem;
-                padding: 0.4rem 0.5rem;
-            }
-
-            .metric {
-                padding: 0.35rem;
-            }
-
-            .metric i {
-                font-size: 0.55rem;
-            }
-
-            .metric-cat {
-                font-size: 0.4rem;
-            }
-
-            .metric-val {
-                font-size: 0.7rem;
-            }
-
-            .metric-note {
-                font-size: 0.4rem;
-            }
-
-            .name {
-                font-size: 0.75rem;
-            }
-
-            .badge {
-                padding: 0.12rem 0.3rem;
-                font-size: 0.43rem;
-            }
-
-            .rating-value-block {
-                font-size: 0.9rem;
-                min-width: 36px;
-            }
-
-            .verdict-title {
-                font-size: 0.7rem;
-            }
-
-            .insight-icon {
-                width: 20px;
-                height: 20px;
+            .ai-text {
                 font-size: 0.5rem;
+                line-height: 1.25;
             }
-
-            .insight-content h4 {
+            .verdict-title {
+                font-size: 0.65rem;
+                gap: 4px;
+            }
+            .verdict-title i {
+                margin-right: 1px;
+            }
+            .dominant-name {
                 font-size: 0.55rem;
             }
-
+            .dominant-rating {
+                font-size: 0.65rem;
+                min-width: auto;
+            }
+            .insight-icon {
+                width: 24px;
+                height: 24px;
+                font-size: 0.55rem;
+            }
+            .insight-content h4 {
+                font-size: 0.52rem;
+            }
             .insight-content p,
             .insight-content ul {
-                font-size: 0.55rem;
+                font-size: 0.48rem;
             }
-
-            .footer {
+            .verdict-outcome {
+                font-size: 0.48rem;
                 padding: 0.4rem 0.5rem;
             }
-
-            .footer-badge {
-                font-size: 0.45rem;
+            .footer {
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                gap: 0.2rem;
+                padding: 0.35rem 0.3rem;
+                border-radius: 8px;
+            }
+            .footer-item-block {
+                gap: 0.2rem;
+            }
+            .footer-icon-box {
+                width: 16px;
+                height: 16px;
+                border-radius: 4px;
+            }
+            .footer-icon-box i {
+                font-size: 6px;
+            }
+            .footer-text h4 {
+                font-size: 0.43rem;
+                line-height: 1.2;
+            }
+            .footer-text span {
+                font-size: 0.35rem;
+                line-height: 1.2;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <div class="bg-pulse"></div>
-    <canvas id="particleCanvas"></canvas>
+<div class="bg-pulse"></div>
+<canvas id="particleCanvas"></canvas>
 
-    <div class="app">
-        <!-- ХЕРО БЛОК -->
-        <div class="hero">
-            <div class="hero-divider-dot"></div>
-            <div class="logo-area">
-                <div class="logo-cyan">
-                    <i class="fas fa-chart-line"></i>
+<div class="app">
+    <!-- ХЕРО БЛОК -->
+    <div class="hero">
+        <div class="hero-divider-dot"></div>
+        <div class="logo-area">
+            <div class="logo-cyan">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="title">
+                <h1>Trade Analyzer</h1>
+                <p>AI-мониторинг рыночных позиций</p>
+            </div>
+        </div>
+        <div class="chip-container">
+            <div class="live-chip">
+                <div class="live-dot"></div>
+                <span class="live-text">LIVE DATA</span>
+            </div>
+            <div class="live-chip">
+                <div class="live-dot"></div>
+                <span class="live-text">AI АНАЛИЗ</span>
+            </div>
+            <div class="live-chip">
+                <div class="live-dot"></div>
+                <span class="live-text">СТРАТЕГИЯ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- КОНКУРЕНТЫ -->
+    <div class="competitors-list">
+        <!-- MarketPulse -->
+        <div class="card">
+            <div class="card-header">
+                <div class="competitor">
+                    <span class="name">MarketPulse</span>
+                    <span class="badge badge-leader"><i class="fas fa-crown"></i> Лидер</span>
                 </div>
-                <div class="title">
-                    <h1>Trade Analyzer</h1>
-                    <p>AI-мониторинг рыночных позиций</p>
+                <div class="rating-block">
+                    <div class="rating-label-block">Общий<br>рейтинг</div>
+                    <div class="rating-value-block">94.6</div>
                 </div>
             </div>
-            <div class="chip-container">
-                <div class="live-chip">
-                    <div class="live-dot"></div>
-                    <span class="live-text">LIVE DATA</span>
-                </div>
-                <div class="live-chip">
-                    <div class="live-dot"></div>
-                    <span class="live-text">AI АНАЛИЗ</span>
-                </div>
-                <div class="live-chip">
-                    <div class="live-dot"></div>
-                    <span class="live-text">СТРАТЕГИЯ</span>
-                </div>
+            <div class="metrics">
+                <div class="metric"><i class="fas fa-chart-line"></i><div class="metric-cat">Трафик (M)</div><div class="metric-val">3.87M</div><div class="metric-note">+21% за месяц</div></div>
+                <div class="metric"><i class="fas fa-percent"></i><div class="metric-cat">Конверсия</div><div class="metric-val">5.9%</div><div class="metric-note">выше рынка</div></div>
+                <div class="metric"><i class="fas fa-wallet"></i><div class="metric-cat">Средний чек</div><div class="metric-val">$58.20</div><div class="metric-note">премиум</div></div>
+                <div class="metric"><i class="fas fa-chart-pie"></i><div class="metric-cat">Доля рынка</div><div class="metric-val">28.4%</div><div class="metric-note">абсолютный лидер</div></div>
+                <div class="metric"><i class="fas fa-smile"></i><div class="metric-cat">Индекс NPS</div><div class="metric-val">81</div><div class="metric-note">высокая лояльность</div></div>
+                <div class="metric"><i class="fas fa-cubes"></i><div class="metric-cat">SKU индекс</div><div class="metric-val">512</div><div class="metric-note">широкий ассортимент</div></div>
+                <div class="metric"><i class="fas fa-gauge-high"></i><div class="metric-cat">Скорость реакции</div><div class="metric-val">1.2 дня</div><div class="metric-note">очень быстро</div></div>
+                <div class="metric"><i class="fas fa-chart-simple"></i><div class="metric-cat">CTR рекламы</div><div class="metric-val">4.7%</div><div class="metric-note">эффективно</div></div>
+            </div>
+            <div class="ai">
+                <div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div>
+                <div class="ai-text">MarketPulse лидирует благодаря широкому ассортименту и быстрой реакции на тренды FanPay. Уязвимость: снижение эффективности ретаргетинга на новую аудиторию. Потенциальный риск — потеря части премиум-сегмента из-за устаревшей механики лояльности.</div>
             </div>
         </div>
 
-        <!-- КОНКУРЕНТЫ -->
-        <div class="competitors-list">
-            <!-- MarketPulse -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="competitor">
-                        <span class="name">MarketPulse</span>
-                        <span class="badge badge-leader"><i class="fas fa-crown"></i> Лидер</span>
-                    </div>
-                    <div class="rating-block">
-                        <div class="rating-label-block">Общий<br>рейтинг</div>
-                        <div class="rating-value-block">94.6</div>
-                    </div>
-                </div>
-                <div class="metrics">
-                    <div class="metric"><i class="fas fa-chart-line"></i>
-                        <div class="metric-cat">Трафик (M)</div>
-                        <div class="metric-val">3.87M</div>
-                        <div class="metric-note">+21% за месяц</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-percent"></i>
-                        <div class="metric-cat">Конверсия</div>
-                        <div class="metric-val">5.9%</div>
-                        <div class="metric-note">выше рынка</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-wallet"></i>
-                        <div class="metric-cat">Средний чек</div>
-                        <div class="metric-val">$58.20</div>
-                        <div class="metric-note">премиум</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-pie"></i>
-                        <div class="metric-cat">Доля рынка</div>
-                        <div class="metric-val">28.4%</div>
-                        <div class="metric-note">абсолютный лидер</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-smile"></i>
-                        <div class="metric-cat">Индекс NPS</div>
-                        <div class="metric-val">81</div>
-                        <div class="metric-note">высокая лояльность</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-cubes"></i>
-                        <div class="metric-cat">SKU индекс</div>
-                        <div class="metric-val">512</div>
-                        <div class="metric-note">широкий ассортимент</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-gauge-high"></i>
-                        <div class="metric-cat">Скорость реакции</div>
-                        <div class="metric-val">1.2 дня</div>
-                        <div class="metric-note">очень быстро</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-simple"></i>
-                        <div class="metric-cat">CTR рекламы</div>
-                        <div class="metric-val">4.7%</div>
-                        <div class="metric-note">эффективно</div>
-                    </div>
-                </div>
-                <div class="ai">
-                    <div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div>
-                    <div class="ai-text">MarketPulse лидирует благодаря широкому ассортименту и быстрой реакции на
-                        тренды FanPay. Уязвимость: снижение эффективности ретаргетинга на новую аудиторию. Потенциальный
-                        риск — потеря части премиум-сегмента из-за устаревшей механики лояльности.</div>
-                </div>
-            </div>
+        <div class="card-separator"><div class="card-separator-diamond"></div></div>
 
-            <div class="card-separator">
-                <div class="card-separator-diamond"></div>
+        <!-- StreamHub -->
+        <div class="card">
+            <div class="card-header">
+                <div class="competitor"><span class="name">StreamHub</span><span class="badge badge-growing"><i class="fas fa-rocket"></i> Растущий</span></div>
+                <div class="rating-block"><div class="rating-label-block">Общий<br>рейтинг</div><div class="rating-value-block">89.3</div></div>
             </div>
-
-            <!-- StreamHub -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="competitor"><span class="name">StreamHub</span><span class="badge badge-growing"><i
-                                class="fas fa-rocket"></i> Растущий</span></div>
-                    <div class="rating-block">
-                        <div class="rating-label-block">Общий<br>рейтинг</div>
-                        <div class="rating-value-block">89.3</div>
-                    </div>
-                </div>
-                <div class="metrics">
-                    <div class="metric"><i class="fas fa-chart-line"></i>
-                        <div class="metric-cat">Трафик (M)</div>
-                        <div class="metric-val">2.94M</div>
-                        <div class="metric-note">+35% рост</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-percent"></i>
-                        <div class="metric-cat">Конверсия</div>
-                        <div class="metric-val">4.8%</div>
-                        <div class="metric-note">выше среднего</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-wallet"></i>
-                        <div class="metric-cat">Средний чек</div>
-                        <div class="metric-val">$49.90</div>
-                        <div class="metric-note">агрессивный</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-pie"></i>
-                        <div class="metric-cat">Доля рынка</div>
-                        <div class="metric-val">19.2%</div>
-                        <div class="metric-note">растёт</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-smile"></i>
-                        <div class="metric-cat">Индекс NPS</div>
-                        <div class="metric-val">73</div>
-                        <div class="metric-note">лояльная база</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-cubes"></i>
-                        <div class="metric-cat">SKU индекс</div>
-                        <div class="metric-val">380</div>
-                        <div class="metric-note">хорошо</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-gauge-high"></i>
-                        <div class="metric-cat">Скорость реакции</div>
-                        <div class="metric-val">2.1 дня</div>
-                        <div class="metric-note">быстро</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-simple"></i>
-                        <div class="metric-cat">CTR рекламы</div>
-                        <div class="metric-val">3.9%</div>
-                        <div class="metric-note">сильный креатив</div>
-                    </div>
-                </div>
-                <div class="ai">
-                    <div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div>
-                    <div class="ai-text">Главная угроза после лидера: быстрый рост трафика и гибкость. Их слабость —
-                        зависимость от платного трафика и нестабильное удержание после 2-го месяца. Атака через
-                        программы лояльности и кэшбэк может переманить их активную аудиторию.</div>
-                </div>
+            <div class="metrics">
+                <div class="metric"><i class="fas fa-chart-line"></i><div class="metric-cat">Трафик (M)</div><div class="metric-val">2.94M</div><div class="metric-note">+35% рост</div></div>
+                <div class="metric"><i class="fas fa-percent"></i><div class="metric-cat">Конверсия</div><div class="metric-val">4.8%</div><div class="metric-note">выше среднего</div></div>
+                <div class="metric"><i class="fas fa-wallet"></i><div class="metric-cat">Средний чек</div><div class="metric-val">$49.90</div><div class="metric-note">агрессивный</div></div>
+                <div class="metric"><i class="fas fa-chart-pie"></i><div class="metric-cat">Доля рынка</div><div class="metric-val">19.2%</div><div class="metric-note">растёт</div></div>
+                <div class="metric"><i class="fas fa-smile"></i><div class="metric-cat">Индекс NPS</div><div class="metric-val">73</div><div class="metric-note">лояльная база</div></div>
+                <div class="metric"><i class="fas fa-cubes"></i><div class="metric-cat">SKU индекс</div><div class="metric-val">380</div><div class="metric-note">хорошо</div></div>
+                <div class="metric"><i class="fas fa-gauge-high"></i><div class="metric-cat">Скорость реакции</div><div class="metric-val">2.1 дня</div><div class="metric-note">быстро</div></div>
+                <div class="metric"><i class="fas fa-chart-simple"></i><div class="metric-cat">CTR рекламы</div><div class="metric-val">3.9%</div><div class="metric-note">сильный креатив</div></div>
             </div>
+            <div class="ai"><div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div><div class="ai-text">Главная угроза после лидера: быстрый рост трафика и гибкость. Их слабость — зависимость от платного трафика и нестабильное удержание после 2-го месяца. Атака через программы лояльности и кэшбэк может переманить их активную аудиторию.</div></div>
+        </div>
 
-            <div class="card-separator">
-                <div class="card-separator-diamond"></div>
+        <div class="card-separator"><div class="card-separator-diamond"></div></div>
+
+        <!-- PayCore -->
+        <div class="card">
+            <div class="card-header"><div class="competitor"><span class="name">PayCore</span><span class="badge badge-stable"><i class="fas fa-anchor"></i> Стабильный</span></div><div class="rating-block"><div class="rating-label-block">Общий<br>рейтинг</div><div class="rating-value-block">84.7</div></div></div>
+            <div class="metrics">
+                <div class="metric"><i class="fas fa-chart-line"></i><div class="metric-cat">Трафик (M)</div><div class="metric-val">2.12M</div><div class="metric-note">ровный</div></div>
+                <div class="metric"><i class="fas fa-percent"></i><div class="metric-cat">Конверсия</div><div class="metric-val">4.0%</div><div class="metric-note">средняя</div></div>
+                <div class="metric"><i class="fas fa-wallet"></i><div class="metric-cat">Средний чек</div><div class="metric-val">$62.10</div><div class="metric-note">высокий</div></div>
+                <div class="metric"><i class="fas fa-chart-pie"></i><div class="metric-cat">Доля рынка</div><div class="metric-val">13.8%</div><div class="metric-note">ниша</div></div>
+                <div class="metric"><i class="fas fa-smile"></i><div class="metric-cat">Индекс NPS</div><div class="metric-val">78</div><div class="metric-note">отлично</div></div>
+                <div class="metric"><i class="fas fa-cubes"></i><div class="metric-cat">SKU индекс</div><div class="metric-val">245</div><div class="metric-note">узкий</div></div>
+                <div class="metric"><i class="fas fa-gauge-high"></i><div class="metric-cat">Скорость реакции</div><div class="metric-val">4.7 дня</div><div class="metric-note">медленный</div></div>
+                <div class="metric"><i class="fas fa-chart-simple"></i><div class="metric-cat">CTR рекламы</div><div class="metric-val">2.5%</div><div class="metric-note">слабый</div></div>
             </div>
+            <div class="ai"><div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div><div class="ai-text">Премиум-игрок с высоким NPS, но теряет долю из-за консервативности. Их сильная сторона — лояльность. Потенциал: переманить их премиум-клиентов через интеграцию с экосистемой FunPay и дополнительные бонусы за автоматизацию.</div></div>
+        </div>
 
-            <!-- PayCore -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="competitor"><span class="name">PayCore</span><span class="badge badge-stable"><i
-                                class="fas fa-anchor"></i> Стабильный</span></div>
-                    <div class="rating-block">
-                        <div class="rating-label-block">Общий<br>рейтинг</div>
-                        <div class="rating-value-block">84.7</div>
-                    </div>
-                </div>
-                <div class="metrics">
-                    <div class="metric"><i class="fas fa-chart-line"></i>
-                        <div class="metric-cat">Трафик (M)</div>
-                        <div class="metric-val">2.12M</div>
-                        <div class="metric-note">ровный</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-percent"></i>
-                        <div class="metric-cat">Конверсия</div>
-                        <div class="metric-val">4.0%</div>
-                        <div class="metric-note">средняя</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-wallet"></i>
-                        <div class="metric-cat">Средний чек</div>
-                        <div class="metric-val">$62.10</div>
-                        <div class="metric-note">высокий</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-pie"></i>
-                        <div class="metric-cat">Доля рынка</div>
-                        <div class="metric-val">13.8%</div>
-                        <div class="metric-note">ниша</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-smile"></i>
-                        <div class="metric-cat">Индекс NPS</div>
-                        <div class="metric-val">78</div>
-                        <div class="metric-note">отлично</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-cubes"></i>
-                        <div class="metric-cat">SKU индекс</div>
-                        <div class="metric-val">245</div>
-                        <div class="metric-note">узкий</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-gauge-high"></i>
-                        <div class="metric-cat">Скорость реакции</div>
-                        <div class="metric-val">4.7 дня</div>
-                        <div class="metric-note">медленный</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-simple"></i>
-                        <div class="metric-cat">CTR рекламы</div>
-                        <div class="metric-val">2.5%</div>
-                        <div class="metric-note">слабый</div>
-                    </div>
-                </div>
-                <div class="ai">
-                    <div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div>
-                    <div class="ai-text">Премиум-игрок с высоким NPS, но теряет долю из-за консервативности. Их сильная
-                        сторона — лояльность. Потенциал: переманить их премиум-клиентов через интеграцию с экосистемой
-                        FunPay и дополнительные бонусы за автоматизацию.</div>
-                </div>
+        <div class="card-separator"><div class="card-separator-diamond"></div></div>
+
+        <!-- TradeCore -->
+        <div class="card">
+            <div class="card-header"><div class="competitor"><span class="name">TradeCore</span><span class="badge badge-rising"><i class="fas fa-flask"></i> Перспективный</span></div><div class="rating-block"><div class="rating-label-block">Общий<br>рейтинг</div><div class="rating-value-block">91.8</div></div></div>
+            <div class="metrics">
+                <div class="metric"><i class="fas fa-chart-line"></i><div class="metric-cat">Трафик (M)</div><div class="metric-val">3.01M</div><div class="metric-note">+16%</div></div>
+                <div class="metric"><i class="fas fa-percent"></i><div class="metric-cat">Конверсия</div><div class="metric-val">5.1%</div><div class="metric-note">хорошо</div></div>
+                <div class="metric"><i class="fas fa-wallet"></i><div class="metric-cat">Средний чек</div><div class="metric-val">$54.40</div><div class="metric-note">баланс</div></div>
+                <div class="metric"><i class="fas fa-chart-pie"></i><div class="metric-cat">Доля рынка</div><div class="metric-val">22.1%</div><div class="metric-note">2 место</div></div>
+                <div class="metric"><i class="fas fa-smile"></i><div class="metric-cat">Индекс NPS</div><div class="metric-val">74</div><div class="metric-note">стабильно</div></div>
+                <div class="metric"><i class="fas fa-cubes"></i><div class="metric-cat">SKU индекс</div><div class="metric-val">463</div><div class="metric-note">широкий</div></div>
+                <div class="metric"><i class="fas fa-gauge-high"></i><div class="metric-cat">Скорость реакции</div><div class="metric-val">1.7 дня</div><div class="metric-note">высокая</div></div>
+                <div class="metric"><i class="fas fa-chart-simple"></i><div class="metric-cat">CTR рекламы</div><div class="metric-val">4.2%</div><div class="metric-note">отлично</div></div>
             </div>
+            <div class="ai"><div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div><div class="ai-text">Самый опасный конкурент. Сочетает масштаб MarketPulse и гибкость стартапа. Их слабое место — отсутствие эксклюзивной программы лояльности. Если мы усиливаем удержание, они становятся уязвимы.</div></div>
+        </div>
 
-            <div class="card-separator">
-                <div class="card-separator-diamond"></div>
+        <div class="card-separator"><div class="card-separator-diamond"></div></div>
+
+        <!-- Mercato -->
+        <div class="card">
+            <div class="card-header"><div class="competitor"><span class="name">Mercato</span><span class="badge badge-outsider"><i class="fas fa-arrow-trend-down"></i> Аутсайдер</span></div><div class="rating-block"><div class="rating-label-block">Общий<br>рейтинг</div><div class="rating-value-block">80.5</div></div></div>
+            <div class="metrics">
+                <div class="metric"><i class="fas fa-chart-line"></i><div class="metric-cat">Трафик (M)</div><div class="metric-val">1.64M</div><div class="metric-note">+8%</div></div>
+                <div class="metric"><i class="fas fa-percent"></i><div class="metric-cat">Конверсия</div><div class="metric-val">3.3%</div><div class="metric-note">низкая</div></div>
+                <div class="metric"><i class="fas fa-wallet"></i><div class="metric-cat">Средний чек</div><div class="metric-val">$43.20</div><div class="metric-note">демпинг</div></div>
+                <div class="metric"><i class="fas fa-chart-pie"></i><div class="metric-cat">Доля рынка</div><div class="metric-val">8.9%</div><div class="metric-note">отстаёт</div></div>
+                <div class="metric"><i class="fas fa-smile"></i><div class="metric-cat">Индекс NPS</div><div class="metric-val">54</div><div class="metric-note">риск оттока</div></div>
+                <div class="metric"><i class="fas fa-cubes"></i><div class="metric-cat">SKU индекс</div><div class="metric-val">210</div><div class="metric-note">узкий</div></div>
+                <div class="metric"><i class="fas fa-gauge-high"></i><div class="metric-cat">Скорость реакции</div><div class="metric-val">6.2 дня</div><div class="metric-note">медленный</div></div>
+                <div class="metric"><i class="fas fa-chart-simple"></i><div class="metric-cat">CTR рекламы</div><div class="metric-val">2.1%</div><div class="metric-note">плохо</div></div>
             </div>
+            <div class="ai"><div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div><div class="ai-text">Аутсайдер с низким NPS и конверсией. Единственная стратегия — ценовой демпинг, который неэффективен в долгую. Могут быть полезны как полигон для теста новых агрессивных механик.</div></div>
+        </div>
+    </div>
 
-            <!-- TradeCore -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="competitor"><span class="name">TradeCore</span><span class="badge badge-rising"><i
-                                class="fas fa-flask"></i> Перспективный</span></div>
-                    <div class="rating-block">
-                        <div class="rating-label-block">Общий<br>рейтинг</div>
-                        <div class="rating-value-block">91.8</div>
-                    </div>
-                </div>
-                <div class="metrics">
-                    <div class="metric"><i class="fas fa-chart-line"></i>
-                        <div class="metric-cat">Трафик (M)</div>
-                        <div class="metric-val">3.01M</div>
-                        <div class="metric-note">+16%</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-percent"></i>
-                        <div class="metric-cat">Конверсия</div>
-                        <div class="metric-val">5.1%</div>
-                        <div class="metric-note">хорошо</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-wallet"></i>
-                        <div class="metric-cat">Средний чек</div>
-                        <div class="metric-val">$54.40</div>
-                        <div class="metric-note">баланс</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-pie"></i>
-                        <div class="metric-cat">Доля рынка</div>
-                        <div class="metric-val">22.1%</div>
-                        <div class="metric-note">2 место</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-smile"></i>
-                        <div class="metric-cat">Индекс NPS</div>
-                        <div class="metric-val">74</div>
-                        <div class="metric-note">стабильно</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-cubes"></i>
-                        <div class="metric-cat">SKU индекс</div>
-                        <div class="metric-val">463</div>
-                        <div class="metric-note">широкий</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-gauge-high"></i>
-                        <div class="metric-cat">Скорость реакции</div>
-                        <div class="metric-val">1.7 дня</div>
-                        <div class="metric-note">высокая</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-simple"></i>
-                        <div class="metric-cat">CTR рекламы</div>
-                        <div class="metric-val">4.2%</div>
-                        <div class="metric-note">отлично</div>
-                    </div>
-                </div>
-                <div class="ai">
-                    <div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div>
-                    <div class="ai-text">Самый опасный конкурент. Сочетает масштаб MarketPulse и гибкость стартапа. Их
-                        слабое место — отсутствие эксклюзивной программы лояльности. Если мы усиливаем удержание, они
-                        становятся уязвимы.</div>
-                </div>
-            </div>
-
-            <div class="card-separator">
-                <div class="card-separator-diamond"></div>
-            </div>
-
-            <!-- Mercato -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="competitor"><span class="name">Mercato</span><span class="badge badge-outsider"><i
-                                class="fas fa-arrow-trend-down"></i> Аутсайдер</span></div>
-                    <div class="rating-block">
-                        <div class="rating-label-block">Общий<br>рейтинг</div>
-                        <div class="rating-value-block">80.5</div>
-                    </div>
-                </div>
-                <div class="metrics">
-                    <div class="metric"><i class="fas fa-chart-line"></i>
-                        <div class="metric-cat">Трафик (M)</div>
-                        <div class="metric-val">1.64M</div>
-                        <div class="metric-note">+8%</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-percent"></i>
-                        <div class="metric-cat">Конверсия</div>
-                        <div class="metric-val">3.3%</div>
-                        <div class="metric-note">низкая</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-wallet"></i>
-                        <div class="metric-cat">Средний чек</div>
-                        <div class="metric-val">$43.20</div>
-                        <div class="metric-note">демпинг</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-pie"></i>
-                        <div class="metric-cat">Доля рынка</div>
-                        <div class="metric-val">8.9%</div>
-                        <div class="metric-note">отстаёт</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-smile"></i>
-                        <div class="metric-cat">Индекс NPS</div>
-                        <div class="metric-val">54</div>
-                        <div class="metric-note">риск оттока</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-cubes"></i>
-                        <div class="metric-cat">SKU индекс</div>
-                        <div class="metric-val">210</div>
-                        <div class="metric-note">узкий</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-gauge-high"></i>
-                        <div class="metric-cat">Скорость реакции</div>
-                        <div class="metric-val">6.2 дня</div>
-                        <div class="metric-note">медленный</div>
-                    </div>
-                    <div class="metric"><i class="fas fa-chart-simple"></i>
-                        <div class="metric-cat">CTR рекламы</div>
-                        <div class="metric-val">2.1%</div>
-                        <div class="metric-note">плохо</div>
-                    </div>
-                </div>
-                <div class="ai">
-                    <div class="ai-header"><i class="fas fa-microchip"></i> AI-АНАЛИЗ ПОЗИЦИИ</div>
-                    <div class="ai-text">Аутсайдер с низким NPS и конверсией. Единственная стратегия — ценовой демпинг,
-                        который неэффективен в долгую. Могут быть полезны как полигон для теста новых агрессивных
-                        механик.</div>
+    <!-- СТРАТЕГИЧЕСКИЙ ВЕРДИКТ -->
+    <div class="verdict">
+        <div class="verdict-top">
+            <div class="verdict-title"><i class="fas fa-chess-queen"></i>Стратегический вердикт</div>
+            <div class="verdict-dominant">
+                <div class="dominant-label">Доминант<br>рынка</div>
+                <div class="dominant-value">
+                    <i class="fas fa-crown"></i>
+                    <span class="dominant-name">MarketPulse</span>
+                    <span class="dominant-rating">94.6</span>
                 </div>
             </div>
         </div>
-
-        <!-- СТРАТЕГИЧЕСКИЙ ВЕРДИКТ -->
-        <div class="verdict">
-            <div class="verdict-top">
-                <div class="verdict-title"><i class="fas fa-chess-queen"></i> Стратегический вердикт</div>
-                <div class="verdict-dominant">
-                    <div class="dominant-label">Доминант<br>рынка</div>
-                    <div class="dominant-value">
-                        <i class="fas fa-crown"></i>
-                        <span class="dominant-name">MarketPulse</span>
-                        <span class="dominant-rating">94.6</span>
-                    </div>
+        <div class="verdict-body">
+            <div class="insight-tile">
+                <div class="insight-icon"><i class="fas fa-microscope"></i></div>
+                <div class="insight-content">
+                    <h4>Анализ лидера</h4>
+                    <p>MarketPulse выигрывает за счёт масштаба SKU и быстрой реакции. Их NPS начал снижаться среди новой аудитории — зона для атаки. Запас прочности сужается.</p>
                 </div>
             </div>
-            <div class="verdict-body">
-                <div class="insight-tile">
-                    <div class="insight-icon"><i class="fas fa-microscope"></i></div>
-                    <div class="insight-content">
-                        <h4>Анализ лидера</h4>
-                        <p>MarketPulse выигрывает за счёт масштаба SKU и быстрой реакции. Их NPS начал снижаться среди
-                            новой аудитории — зона для атаки. Запас прочности сужается.</p>
-                    </div>
-                </div>
 
-                <div class="insight-tile">
-                    <div class="insight-icon"><i class="fas fa-crosshairs"></i></div>
-                    <div class="insight-content">
-                        <h4>Ключевое преимущество перед нами</h4>
-                        <p>Агрессивный бюджет на ранжирование внутри FunPay. Компенсируем персонализацией и
-                            AI-виджетами, которые они не могут быстро скопировать.</p>
-                    </div>
+            <div class="insight-tile">
+                <div class="insight-icon"><i class="fas fa-crosshairs"></i></div>
+                <div class="insight-content">
+                    <h4>Ключевое преимущество перед нами</h4>
+                    <p>Агрессивный бюджет на ранжирование внутри FunPay. Компенсируем персонализацией и AI-виджетами, которые они не могут быстро скопировать.</p>
                 </div>
+            </div>
 
-                <div class="insight-tile">
-                    <div class="insight-icon"><i class="fas fa-route"></i></div>
-                    <div class="insight-content">
-                        <h4>Стратегический план на 30 дней</h4>
-                        <ul>
-                            <li><i class="fas fa-angle-right"></i> Поднять конверсию до 5.3% через AI-рекомендации.</li>
-                            <li><i class="fas fa-angle-right"></i> Ударить по слабому CTR Mercato и медленной реакции
-                                PayCore.</li>
-                            <li><i class="fas fa-angle-right"></i> Внедрить «комбо-предложения» для оттока аудитории
-                                StreamHub.</li>
-                        </ul>
-                    </div>
+            <div class="insight-tile">
+                <div class="insight-icon"><i class="fas fa-route"></i></div>
+                <div class="insight-content">
+                    <h4>Стратегический план на 30 дней</h4>
+                    <ul>
+                        <li><i class="fas fa-angle-right"></i> Поднять конверсию до 5.3% через AI-рекомендации.</li>
+                        <li><i class="fas fa-angle-right"></i> Ударить по слабому CTR Mercato и медленной реакции PayCore.</li>
+                        <li><i class="fas fa-angle-right"></i> Внедрить «комбо-предложения» для оттока аудитории StreamHub.</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="verdict-outcome">
-                    <i class="fas fa-chart-simple"></i>
-                    <span><strong>Итог:</strong> при внедрении программы лояльности и усилении удержания на 2-м месяце —
-                        догоняем MarketPulse по общему рейтингу за 60 дней.</span>
-                </div>
+            <div class="verdict-outcome">
+                <i class="fas fa-chart-simple"></i>
+                <span><strong>Итог:</strong> при внедрении программы лояльности и усилении удержания на 2-м месяце — догоняем MarketPulse по общему рейтингу за 60 дней.</span>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <!-- Левая часть -->
-            <div class="footer-left">
-                <div class="footer-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="footer-brand-text">
-                    <h4>Trade Analyzer</h4>
-                    <span>AI Intelligence</span>
-                </div>
-            </div>
-
-            <!-- Центр -->
-            <div class="footer-center">
-                <span class="footer-badge"><span class="footer-dot"></span> Тренды</span>
-                <span class="footer-badge"><span class="footer-dot"></span> v2.5.1</span>
-            </div>
-
-            <!-- Правая часть -->
-            <div class="footer-right">
-                <div class="footer-secure-icon"><i class="fas fa-shield-alt"></i></div>
-                <div class="footer-secure-text">
-                    <h4>Шифрование</h4>
-                    <span>Защищённый канал</span>
-                </div>
+    <!-- ФУТЕР -->
+    <div class="footer">
+        <div class="footer-item-block">
+            <div class="footer-icon-box"><i class="fas fa-robot"></i></div>
+            <div class="footer-text">
+                <h4>AI-Аналитика</h4>
+                <span>Авто-мониторинг</span>
             </div>
         </div>
+        <div class="footer-item-block">
+            <div class="footer-icon-box"><i class="fas fa-clock"></i></div>
+            <div class="footer-text">
+                <h4>Мониторинг</h4>
+                <span>Реальное время</span>
+            </div>
+        </div>
+        <div class="footer-item-block">
+            <div class="footer-icon-box"><i class="fas fa-shield-alt"></i></div>
+            <div class="footer-text">
+                <h4>Шифрование</h4>
+                <span>Защищённый канал</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <script>
-            (function () {
-                const canvas = document.getElementById('particleCanvas');
-                const ctx = canvas.getContext('2d');
-                let width, height;
-                let particles = [];
-                let wildParticles = [];
-                let sparkles = [];
-                let animationId;
-                let time = 0;
+<script>
+    (function() {
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+        let wildParticles = [];
+        let sparkles = [];
+        let animationId;
+        let time = 0;
 
-                function resize() {
-                    width = window.innerWidth;
-                    height = window.innerHeight;
-                    canvas.width = width;
-                    canvas.height = height;
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        const perm = new Uint8Array(512);
+        for (let i = 0; i < 256; i++) perm[i] = i;
+        for (let i = 255; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [perm[i], perm[j]] = [perm[j], perm[i]];
+        }
+        for (let i = 0; i < 256; i++) perm[i + 256] = perm[i];
+
+        function noise2D(x, y) {
+            const X = Math.floor(x) & 255;
+            const Y = Math.floor(y) & 255;
+            const xf = x - Math.floor(x);
+            const yf = y - Math.floor(y);
+            const u = xf * xf * (3 - 2 * xf);
+            const v = yf * yf * (3 - 2 * yf);
+            const aa = perm[perm[X] + Y];
+            const ab = perm[perm[X] + Y + 1];
+            const ba = perm[perm[X + 1] + Y];
+            const bb = perm[perm[X + 1] + Y + 1];
+            const lerp = (a, b, t) => a + (b - a) * t;
+            return lerp(
+                lerp((aa & 1 ? 1 : -1) * xf * (1 - yf), (ba & 1 ? 1 : -1) * (xf - 1) * (1 - yf), u),
+                lerp((ab & 1 ? 1 : -1) * xf * yf, (bb & 1 ? 1 : -1) * (xf - 1) * yf, u),
+                v
+            );
+        }
+
+        class Firefly {
+            constructor() {
+                this.reset(true);
+            }
+            reset(initial) {
+                this.x = initial ? Math.random() * width : (Math.random() < 0.5 ? -20 : width + 20);
+                this.y = initial ? Math.random() * height : Math.random() * height;
+                this.size = Math.random() * 2.2 + 1.2;
+                this.baseSpeedX = (Math.random() - 0.5) * 0.3;
+                this.baseSpeedY = (Math.random() - 0.5) * 0.2;
+                this.noiseOffsetX = Math.random() * 1000;
+                this.noiseOffsetY = Math.random() * 1000;
+                this.noiseScale = 0.003 + Math.random() * 0.006;
+                this.baseAlpha = Math.random() * 0.4 + 0.15;
+                this.pulsePhase = Math.random() * Math.PI * 2;
+                this.pulseSpeed = 0.02 + Math.random() * 0.04;
+                this.trail = [];
+                this.maxTrail = Math.floor(Math.random() * 10) + 6;
+            }
+            update() {
+                this.trail.push({ x: this.x, y: this.y, alpha: this.baseAlpha * 0.5 });
+                if (this.trail.length > this.maxTrail) this.trail.shift();
+
+                const noiseX = noise2D(this.x * this.noiseScale + this.noiseOffsetX, this.y * this.noiseScale + this.noiseOffsetY + time * 0.0003);
+                const noiseY = noise2D(this.x * this.noiseScale + this.noiseOffsetX + 100, this.y * this.noiseScale + this.noiseOffsetY + time * 0.0003);
+                this.speedX = this.baseSpeedX + noiseX * 0.25;
+                this.speedY = this.baseSpeedY + noiseY * 0.25;
+
+                const maxSpeed = 0.45;
+                const speed = Math.sqrt(this.speedX ** 2 + this.speedY ** 2);
+                if (speed > maxSpeed) {
+                    this.speedX = (this.speedX / speed) * maxSpeed;
+                    this.speedY = (this.speedY / speed) * maxSpeed;
                 }
 
-                const perm = new Uint8Array(512);
-                for (let i = 0; i < 256; i++) perm[i] = i;
-                for (let i = 255; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [perm[i], perm[j]] = [perm[j], perm[i]];
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.pulsePhase += this.pulseSpeed;
+
+                if (this.x < -30 || this.x > width + 30 || this.y < -30 || this.y > height + 30) {
+                    this.reset(false);
+                    this.trail = [];
                 }
-                for (let i = 0; i < 256; i++) perm[i + 256] = perm[i];
+            }
+            draw() {
+                const pulse = 0.5 + 0.5 * Math.sin(this.pulsePhase);
+                const glowAlpha = this.baseAlpha * (0.55 + pulse * 0.45);
+                const brightnessMultiplier = width <= 425 ? 1.4 : width <= 768 ? 1.15 : 1;
 
-                function noise2D(x, y) {
-                    const X = Math.floor(x) & 255;
-                    const Y = Math.floor(y) & 255;
-                    const xf = x - Math.floor(x);
-                    const yf = y - Math.floor(y);
-                    const u = xf * xf * (3 - 2 * xf);
-                    const v = yf * yf * (3 - 2 * yf);
-                    const aa = perm[perm[X] + Y];
-                    const ab = perm[perm[X] + Y + 1];
-                    const ba = perm[perm[X + 1] + Y];
-                    const bb = perm[perm[X + 1] + Y + 1];
-                    const lerp = (a, b, t) => a + (b - a) * t;
-                    return lerp(
-                        lerp((aa & 1 ? 1 : -1) * xf * (1 - yf), (ba & 1 ? 1 : -1) * (xf - 1) * (1 - yf), u),
-                        lerp((ab & 1 ? 1 : -1) * xf * yf, (bb & 1 ? 1 : -1) * (xf - 1) * yf, u),
-                        v
-                    );
-                }
-
-                class Firefly {
-                    constructor() {
-                        this.reset(true);
+                if (this.trail.length > 1) {
+                    ctx.beginPath();
+                    ctx.moveTo(this.trail[0].x, this.trail[0].y);
+                    for (let i = 1; i < this.trail.length; i++) {
+                        ctx.lineTo(this.trail[i].x, this.trail[i].y);
                     }
-                    reset(initial) {
-                        this.x = initial ? Math.random() * width : (Math.random() < 0.5 ? -20 : width + 20);
-                        this.y = initial ? Math.random() * height : Math.random() * height;
-                        this.size = Math.random() * 2.2 + 1.2;
-                        this.baseSpeedX = (Math.random() - 0.5) * 0.3;
-                        this.baseSpeedY = (Math.random() - 0.5) * 0.2;
-                        this.noiseOffsetX = Math.random() * 1000;
-                        this.noiseOffsetY = Math.random() * 1000;
-                        this.noiseScale = 0.003 + Math.random() * 0.006;
-                        this.baseAlpha = Math.random() * 0.4 + 0.15;
-                        this.pulsePhase = Math.random() * Math.PI * 2;
-                        this.pulseSpeed = 0.02 + Math.random() * 0.04;
-                        this.trail = [];
-                        this.maxTrail = Math.floor(Math.random() * 10) + 6;
-                    }
-                    update() {
-                        this.trail.push({ x: this.x, y: this.y, alpha: this.baseAlpha * 0.5 });
-                        if (this.trail.length > this.maxTrail) this.trail.shift();
-
-                        const noiseX = noise2D(this.x * this.noiseScale + this.noiseOffsetX, this.y * this.noiseScale + this.noiseOffsetY + time * 0.0003);
-                        const noiseY = noise2D(this.x * this.noiseScale + this.noiseOffsetX + 100, this.y * this.noiseScale + this.noiseOffsetY + time * 0.0003);
-                        this.speedX = this.baseSpeedX + noiseX * 0.25;
-                        this.speedY = this.baseSpeedY + noiseY * 0.25;
-
-                        const maxSpeed = 0.45;
-                        const speed = Math.sqrt(this.speedX ** 2 + this.speedY ** 2);
-                        if (speed > maxSpeed) {
-                            this.speedX = (this.speedX / speed) * maxSpeed;
-                            this.speedY = (this.speedY / speed) * maxSpeed;
-                        }
-
-                        this.x += this.speedX;
-                        this.y += this.speedY;
-                        this.pulsePhase += this.pulseSpeed;
-
-                        if (this.x < -30 || this.x > width + 30 || this.y < -30 || this.y > height + 30) {
-                            this.reset(false);
-                            this.trail = [];
-                        }
-                    }
-                    draw() {
-                        const pulse = 0.5 + 0.5 * Math.sin(this.pulsePhase);
-                        const glowAlpha = this.baseAlpha * (0.55 + pulse * 0.45);
-
-                        if (this.trail.length > 1) {
-                            ctx.beginPath();
-                            ctx.moveTo(this.trail[0].x, this.trail[0].y);
-                            for (let i = 1; i < this.trail.length; i++) {
-                                ctx.lineTo(this.trail[i].x, this.trail[i].y);
-                            }
-                            ctx.strokeStyle = `rgba(45, 212, 191, ${glowAlpha * 0.3})`;
-                            ctx.lineWidth = this.size * 0.6;
-                            ctx.lineCap = 'round';
-                            ctx.stroke();
-                        }
-
-                        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2.5);
-                        gradient.addColorStop(0, `rgba(167, 243, 208, ${glowAlpha * 0.9})`);
-                        gradient.addColorStop(0.4, `rgba(45, 212, 191, ${glowAlpha * 0.6})`);
-                        gradient.addColorStop(1, 'rgba(45, 212, 191, 0)');
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.size * 2.5, 0, Math.PI * 2);
-                        ctx.fillStyle = gradient;
-                        ctx.fill();
-
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.size * 0.5, 0, Math.PI * 2);
-                        ctx.fillStyle = `rgba(255, 255, 255, ${glowAlpha * 0.6})`;
-                        ctx.fill();
-                    }
+                    ctx.strokeStyle = `rgba(45, 212, 191, ${glowAlpha * 0.3})`;
+                    ctx.lineWidth = this.size * 0.6;
+                    ctx.lineCap = 'round';
+                    ctx.stroke();
                 }
 
-                class WildParticle {
-                    constructor() {
-                        this.reset();
-                    }
-                    reset() {
-                        const edge = Math.floor(Math.random() * 4);
-                        switch (edge) {
-                            case 0: this.x = -10; this.y = Math.random() * height; break;
-                            case 1: this.x = width + 10; this.y = Math.random() * height; break;
-                            case 2: this.x = Math.random() * width; this.y = -10; break;
-                            case 3: this.x = Math.random() * width; this.y = height + 10; break;
-                        }
-                        this.size = Math.random() * 1.5 + 0.8;
-                        this.speedX = (Math.random() - 0.5) * 0.6;
-                        this.speedY = (Math.random() - 0.5) * 0.6;
-                        this.life = 0;
-                        this.maxLife = 150 + Math.random() * 300;
-                        this.alpha = Math.random() * 0.3 + 0.1;
-                        this.curvePhase = Math.random() * Math.PI * 2;
-                        this.curveSpeed = 0.02 + Math.random() * 0.05;
-                        this.curveAmp = 0.1 + Math.random() * 0.3;
-                    }
-                    update() {
-                        this.life++;
-                        this.curvePhase += this.curveSpeed;
-                        this.x += this.speedX + Math.sin(this.curvePhase) * this.curveAmp;
-                        this.y += this.speedY + Math.cos(this.curvePhase * 1.3) * this.curveAmp;
-                        if (this.life > this.maxLife || this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) {
-                            this.reset();
-                        }
-                    }
-                    draw() {
-                        const lifeRatio = this.life / this.maxLife;
-                        const fade = lifeRatio < 0.1 ? lifeRatio / 0.1 : lifeRatio > 0.8 ? (1 - lifeRatio) / 0.2 : 1;
-                        const alpha = this.alpha * fade;
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                        ctx.fillStyle = `rgba(45, 212, 191, ${alpha})`;
-                        ctx.fill();
-                        ctx.shadowBlur = 6;
-                        ctx.shadowColor = `rgba(45, 212, 191, ${alpha * 0.5})`;
-                        ctx.fill();
-                        ctx.shadowBlur = 0;
-                    }
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2.5);
+                gradient.addColorStop(0, `rgba(167, 243, 208, ${glowAlpha * 0.9 * brightnessMultiplier})`);
+                gradient.addColorStop(0.4, `rgba(45, 212, 191, ${glowAlpha * 0.6})`);
+                gradient.addColorStop(1, 'rgba(45, 212, 191, 0)');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 0.5, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${glowAlpha * 0.6})`;
+                ctx.fill();
+            }
+        }
+
+        class WildParticle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                const edge = Math.floor(Math.random() * 4);
+                switch(edge) {
+                    case 0: this.x = -10; this.y = Math.random() * height; break;
+                    case 1: this.x = width + 10; this.y = Math.random() * height; break;
+                    case 2: this.x = Math.random() * width; this.y = -10; break;
+                    case 3: this.x = Math.random() * width; this.y = height + 10; break;
                 }
-
-                class Sparkle {
-                    constructor() {
-                        this.reset();
-                    }
-                    reset() {
-                        this.x = Math.random() * width;
-                        this.y = Math.random() * height;
-                        this.size = Math.random() * 1 + 0.4;
-                        this.life = 0;
-                        this.maxLife = 70 + Math.random() * 130;
-                        this.alpha = 0;
-                        this.blinkSpeed = 0.06 + Math.random() * 0.1;
-                        this.phase = Math.random() * Math.PI * 2;
-                    }
-                    update() {
-                        this.life++;
-                        this.phase += this.blinkSpeed;
-                        const lifeRatio = this.life / this.maxLife;
-                        if (lifeRatio < 0.12) {
-                            this.alpha = lifeRatio / 0.12;
-                        } else {
-                            this.alpha = 1 - ((lifeRatio - 0.12) / 0.88);
-                        }
-                        const twinkle = 0.5 + 0.5 * Math.sin(this.phase * 3);
-                        this.alpha *= (0.5 + twinkle * 0.5);
-                        this.alpha = Math.max(0, Math.min(0.75, this.alpha));
-                        if (this.life >= this.maxLife) this.reset();
-                    }
-                    draw() {
-                        if (this.alpha <= 0.03) return;
-                        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
-                        gradient.addColorStop(0, `rgba(255, 255, 255, ${this.alpha})`);
-                        gradient.addColorStop(0.3, `rgba(167, 243, 208, ${this.alpha * 0.6})`);
-                        gradient.addColorStop(1, 'rgba(45, 212, 191, 0)');
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
-                        ctx.fillStyle = gradient;
-                        ctx.fill();
-
-                        const crossAlpha = this.alpha * 0.4;
-                        if (crossAlpha > 0.04) {
-                            ctx.strokeStyle = `rgba(255, 255, 255, ${crossAlpha})`;
-                            ctx.lineWidth = 0.4;
-                            ctx.beginPath();
-                            ctx.moveTo(this.x - this.size * 3.5, this.y);
-                            ctx.lineTo(this.x + this.size * 3.5, this.y);
-                            ctx.moveTo(this.x, this.y - this.size * 3.5);
-                            ctx.lineTo(this.x, this.y + this.size * 3.5);
-                            ctx.stroke();
-                        }
-                    }
+                this.size = Math.random() * 1.5 + 0.8;
+                this.speedX = (Math.random() - 0.5) * 0.6;
+                this.speedY = (Math.random() - 0.5) * 0.6;
+                this.life = 0;
+                this.maxLife = 150 + Math.random() * 300;
+                this.alpha = Math.random() * 0.3 + 0.1;
+                this.curvePhase = Math.random() * Math.PI * 2;
+                this.curveSpeed = 0.02 + Math.random() * 0.05;
+                this.curveAmp = 0.1 + Math.random() * 0.3;
+            }
+            update() {
+                this.life++;
+                this.curvePhase += this.curveSpeed;
+                this.x += this.speedX + Math.sin(this.curvePhase) * this.curveAmp;
+                this.y += this.speedY + Math.cos(this.curvePhase * 1.3) * this.curveAmp;
+                if (this.life > this.maxLife || this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) {
+                    this.reset();
                 }
+            }
+            draw() {
+                const lifeRatio = this.life / this.maxLife;
+                const fade = lifeRatio < 0.1 ? lifeRatio / 0.1 : lifeRatio > 0.8 ? (1 - lifeRatio) / 0.2 : 1;
+                const alpha = this.alpha * fade;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(45, 212, 191, ${alpha})`;
+                ctx.fill();
+                ctx.shadowBlur = 6;
+                ctx.shadowColor = `rgba(45, 212, 191, ${alpha * 0.5})`;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
 
-                function initParticles() {
-                    particles = [];
-                    wildParticles = [];
-                    sparkles = [];
-                    const fireflyCount = Math.min(110, Math.floor(width * height / 11000));
-                    const wildCount = Math.min(15, Math.floor(width * height / 80000));
-                    const sparkleCount = Math.min(40, Math.floor(width * height / 28000));
-                    for (let i = 0; i < fireflyCount; i++) particles.push(new Firefly());
-                    for (let i = 0; i < wildCount; i++) wildParticles.push(new WildParticle());
-                    for (let i = 0; i < sparkleCount; i++) sparkles.push(new Sparkle());
+        class Sparkle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 1 + 0.4;
+                this.life = 0;
+                this.maxLife = 70 + Math.random() * 130;
+                this.alpha = 0;
+                this.blinkSpeed = 0.06 + Math.random() * 0.1;
+                this.phase = Math.random() * Math.PI * 2;
+            }
+            update() {
+                this.life++;
+                this.phase += this.blinkSpeed;
+                const lifeRatio = this.life / this.maxLife;
+                if (lifeRatio < 0.12) {
+                    this.alpha = lifeRatio / 0.12;
+                } else {
+                    this.alpha = 1 - ((lifeRatio - 0.12) / 0.88);
                 }
+                const twinkle = 0.5 + 0.5 * Math.sin(this.phase * 3);
+                this.alpha *= (0.5 + twinkle * 0.5);
+                this.alpha = Math.max(0, Math.min(0.75, this.alpha));
+                if (this.life >= this.maxLife) this.reset();
+            }
+            draw() {
+                if (this.alpha <= 0.03) return;
+                const sparkleBrightness = width <= 425 ? 1.5 : width <= 768 ? 1.2 : 1;
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
+                gradient.addColorStop(0, `rgba(255, 255, 255, ${this.alpha * sparkleBrightness})`);
+                gradient.addColorStop(0.3, `rgba(167, 243, 208, ${this.alpha * 0.6})`);
+                gradient.addColorStop(1, 'rgba(45, 212, 191, 0)');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
 
-                function animate() {
-                    if (!ctx) return;
-                    time++;
-                    ctx.clearRect(0, 0, width, height);
-                    for (let i = 0; i < particles.length; i++) {
-                        particles[i].update();
-                        particles[i].draw();
-                    }
-                    for (let i = 0; i < wildParticles.length; i++) {
-                        wildParticles[i].update();
-                        wildParticles[i].draw();
-                    }
-                    for (let i = 0; i < sparkles.length; i++) {
-                        sparkles[i].update();
-                        sparkles[i].draw();
-                    }
-                    animationId = requestAnimationFrame(animate);
+                const crossAlpha = this.alpha * 0.4;
+                if (crossAlpha > 0.04) {
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${crossAlpha})`;
+                    ctx.lineWidth = 0.4;
+                    ctx.beginPath();
+                    ctx.moveTo(this.x - this.size * 3.5, this.y);
+                    ctx.lineTo(this.x + this.size * 3.5, this.y);
+                    ctx.moveTo(this.x, this.y - this.size * 3.5);
+                    ctx.lineTo(this.x, this.y + this.size * 3.5);
+                    ctx.stroke();
                 }
+            }
+        }
 
-                function handleResize() {
-                    resize();
-                    initParticles();
-                }
+        function initParticles() {
+            particles = [];
+            wildParticles = [];
+            sparkles = [];
+            const area = width * height;
+            let fireflyCount, wildCount, sparkleCount;
+            if (width <= 375) {
+                fireflyCount = Math.min(50, Math.floor(area / 15000));
+                wildCount = Math.min(8, Math.floor(area / 60000));
+                sparkleCount = Math.min(20, Math.floor(area / 22000));
+            } else if (width <= 599) {
+                fireflyCount = Math.min(70, Math.floor(area / 13000));
+                wildCount = Math.min(10, Math.floor(area / 70000));
+                sparkleCount = Math.min(28, Math.floor(area / 25000));
+            } else if (width <= 1023) {
+                fireflyCount = Math.min(90, Math.floor(area / 12000));
+                wildCount = Math.min(13, Math.floor(area / 75000));
+                sparkleCount = Math.min(35, Math.floor(area / 27000));
+            } else {
+                fireflyCount = Math.min(110, Math.floor(area / 11000));
+                wildCount = Math.min(15, Math.floor(area / 80000));
+                sparkleCount = Math.min(40, Math.floor(area / 28000));
+            }
+            for (let i = 0; i < fireflyCount; i++) particles.push(new Firefly());
+            for (let i = 0; i < wildCount; i++) wildParticles.push(new WildParticle());
+            for (let i = 0; i < sparkleCount; i++) sparkles.push(new Sparkle());
+        }
 
-                window.addEventListener('resize', handleResize);
-                window.addEventListener('orientationchange', () => setTimeout(handleResize, 100));
-                resize();
-                initParticles();
-                animate();
-                window.addEventListener('beforeunload', () => {
-                    if (animationId) cancelAnimationFrame(animationId);
-                    window.removeEventListener('resize', handleResize);
-                });
-            })();
-        </script>
+        function animate() {
+            if (!ctx) return;
+            time++;
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            for (let i = 0; i < wildParticles.length; i++) {
+                wildParticles[i].update();
+                wildParticles[i].draw();
+            }
+            for (let i = 0; i < sparkles.length; i++) {
+                sparkles[i].update();
+                sparkles[i].draw();
+            }
+            animationId = requestAnimationFrame(animate);
+        }
+
+        function handleResize() {
+            resize();
+            initParticles();
+        }
+
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', () => setTimeout(handleResize, 100));
+        resize();
+        initParticles();
+        animate();
+        window.addEventListener('beforeunload', () => {
+            if (animationId) cancelAnimationFrame(animationId);
+            window.removeEventListener('resize', handleResize);
+        });
+    })();
+</script>
 </body>
-
 </html>
