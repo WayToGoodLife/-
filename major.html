@@ -2,8 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>Trade Analyzer | Конкурентная аналитика FunPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -15,7 +17,7 @@
 
         body {
             background: #0B0F1A;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #E2E8F0;
             overflow-x: hidden;
             min-height: 100vh;
@@ -47,6 +49,18 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem 2rem 3rem;
+            width: 100%;
+            overflow: visible;
+        }
+
+        .card, .verdict, .footer, .ai {
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        img, canvas {
+            max-width: 100%;
+            height: auto;
         }
 
         /* ========== ХЕРО БЛОК ========== */
@@ -336,7 +350,7 @@
             border: 1px solid rgba(45, 212, 191, 0.25);
             border-radius: 14px;
             padding: 0.4rem 0.9rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
             font-size: 2rem;
             font-weight: 700;
             color: #2DD4BF;
@@ -386,7 +400,7 @@
         }
 
         .metric-val {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
             font-size: 1.4rem;
             font-weight: 600;
             margin: 0.3rem 0;
@@ -438,7 +452,6 @@
             font-weight: 800;
             font-size: 0.85rem;
             margin-bottom: 0.6rem;
-            color: #2DD4BF;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -446,6 +459,15 @@
             text-transform: uppercase;
             position: relative;
             z-index: 1;
+            background: linear-gradient(135deg, #FFFFFF, #2DD4BF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .ai-header i {
+            color: #2DD4BF;
+            -webkit-text-fill-color: #2DD4BF;
         }
 
         .ai-text {
@@ -534,7 +556,7 @@
         }
 
         .dominant-rating {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
             font-size: 1.3rem;
             font-weight: 700;
             color: #2DD4BF;
@@ -710,14 +732,8 @@
         /* ========== АДАПТИВНОСТЬ ========== */
 
         @media (max-width: 1399px) {
-            .app {
-                padding: 1.5rem 2rem 2.5rem;
-            }
-            .metrics {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.9rem;
-                padding: 1.3rem 1.5rem;
-            }
+            .app { padding: 1.5rem 2rem 2.5rem; }
+            .metrics { grid-template-columns: repeat(3, 1fr); gap: 0.9rem; padding: 1.3rem 1.5rem; }
             .metric-val { font-size: 1.25rem; }
             .metric-cat { font-size: 0.62rem; }
             .name { font-size: 1.4rem; }
@@ -739,13 +755,7 @@
 
         @media (max-width: 1023px) {
             .app { padding: 1.2rem 1.5rem 2rem; }
-            .hero {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 1.2rem;
-                padding-bottom: 1.5rem;
-            }
+            .hero { flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; padding-bottom: 1.5rem; }
             .hero::after { width: 60%; left: 20%; }
             .hero-divider-dot { left: 50%; width: 8px; height: 8px; }
             .logo-area { gap: 0.6rem; justify-content: flex-start; width: auto; }
@@ -779,7 +789,7 @@
         }
 
         @media (max-width: 767px) {
-            .app { padding: 1rem 1rem 1.5rem; }
+            .app { padding: 1rem 1.2rem 1.5rem; }
             .hero { gap: 0.8rem; margin-bottom: 2rem; }
             .hero::after { width: 70%; left: 15%; }
             .logo-area { gap: 0.55rem; justify-content: flex-start; width: auto; }
@@ -811,7 +821,7 @@
         }
 
         @media (max-width: 599px) {
-            .app { padding: 0.9rem 0.9rem 1.3rem; }
+            .app { padding: 1.2rem 1.2rem 2rem; }
             .hero { flex-direction: column; align-items: center; gap: 0.7rem; padding-bottom: 1.2rem; }
             .hero::after { width: 80%; left: 10%; }
             .hero-divider-dot { width: 7px; height: 7px; }
@@ -856,7 +866,7 @@
         }
 
         @media (max-width: 425px) {
-            .app { padding: 0.7rem 0.6rem 1rem; }
+            .app { padding: 1rem 1rem 1.5rem; }
             .hero { gap: 0.6rem; padding-bottom: 1rem; margin-bottom: 1.5rem; }
             .hero::after { width: 85%; left: 7.5%; }
             .hero-divider-dot { width: 6px; height: 6px; }
@@ -897,14 +907,7 @@
             .insight-icon { width: 26px; height: 26px; border-radius: 6px; font-size: 0.6rem; }
             .insight-content h4 { font-size: 0.65rem; margin-bottom: 0.15rem; }
             .insight-content p, .insight-content ul { font-size: 0.62rem; line-height: 1.35; }
-            .verdict-outcome {
-                padding: 0.55rem 0.7rem;
-                font-size: 0.62rem;
-                border-radius: 10px;
-                text-align: center;
-                flex-wrap: wrap;
-                gap: 0.3rem;
-            }
+            .verdict-outcome { padding: 0.55rem 0.7rem; font-size: 0.62rem; border-radius: 10px; text-align: center; flex-wrap: wrap; gap: 0.3rem; }
             .verdict-outcome span { display: inline; }
             .verdict-outcome br { display: none; }
             .footer { flex-wrap: nowrap; justify-content: space-around; gap: 0.4rem; padding: 0.6rem 0.5rem; border-radius: 12px; }
@@ -916,7 +919,7 @@
         }
 
         @media (max-width: 375px) {
-            .app { padding: 0.5rem 0.4rem 0.8rem; }
+            .app { padding: 0.8rem 0.8rem 1.2rem; }
             .hero { gap: 0.5rem; padding-bottom: 0.8rem; margin-bottom: 1.2rem; }
             .hero::after { width: 90%; left: 5%; }
             .hero-divider-dot { width: 5px; height: 5px; bottom: -3px; }
@@ -962,16 +965,7 @@
             .insight-icon { width: 28px; height: 28px; border-radius: 6px; font-size: 0.65rem; align-self: flex-start; }
             .insight-content h4 { font-size: 0.6rem; margin-bottom: 0.12rem; }
             .insight-content p, .insight-content ul { font-size: 0.55rem; line-height: 1.3; }
-            .verdict-outcome {
-                padding: 0.5rem 0.6rem;
-                font-size: 0.53rem;
-                border-radius: 8px;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 0.3rem;
-                text-align: center;
-                line-height: 1.3;
-            }
+            .verdict-outcome { padding: 0.5rem 0.6rem; font-size: 0.53rem; border-radius: 8px; flex-direction: row; flex-wrap: wrap; gap: 0.3rem; text-align: center; line-height: 1.3; }
             .verdict-outcome i { font-size: 0.55rem; }
             .verdict-outcome span { max-width: 90%; }
             .footer { flex-wrap: nowrap; justify-content: space-around; gap: 0.3rem; padding: 0.5rem 0.4rem; border-radius: 10px; }
@@ -983,7 +977,7 @@
         }
 
         @media (max-width: 320px) {
-            .app { padding: 0.35rem 0.3rem 0.6rem; }
+            .app { padding: 0.7rem 0.7rem 1rem; }
             .hero::after { width: 95%; left: 2.5%; }
             .hero-divider-dot { width: 4px; height: 4px; }
             .logo-area { gap: 0.35rem; justify-content: flex-start; width: auto; }
@@ -1019,13 +1013,7 @@
             .insight-icon { width: 24px; height: 24px; font-size: 0.55rem; }
             .insight-content h4 { font-size: 0.52rem; }
             .insight-content p, .insight-content ul { font-size: 0.48rem; }
-            .verdict-outcome {
-                font-size: 0.46rem;
-                padding: 0.4rem 0.5rem;
-                flex-wrap: wrap;
-                gap: 0.25rem;
-                line-height: 1.25;
-            }
+            .verdict-outcome { font-size: 0.46rem; padding: 0.4rem 0.5rem; flex-wrap: wrap; gap: 0.25rem; line-height: 1.25; }
             .verdict-outcome i { font-size: 0.5rem; }
             .footer { flex-wrap: nowrap; justify-content: space-around; gap: 0.2rem; padding: 0.35rem 0.3rem; border-radius: 8px; }
             .footer-item-block { gap: 0.2rem; }
@@ -1255,16 +1243,13 @@
             reset(initial) {
                 this.x = initial ? Math.random() * width : (Math.random() < 0.5 ? -20 : width + 20);
                 this.y = initial ? Math.random() * height : Math.random() * height;
-                // Адаптивный размер: мельче на телефонах
                 const sizeScale = width <= 425 ? 0.7 : width <= 768 ? 0.85 : 1;
                 this.size = (Math.random() * 2.2 + 1.2) * sizeScale;
-                // Адаптивная скорость: медленнее на телефонах
                 const speedScale = width <= 425 ? 0.7 : width <= 768 ? 0.85 : 1;
                 this.baseSpeedX = (Math.random() - 0.5) * 0.3 * speedScale;
                 this.baseSpeedY = (Math.random() - 0.5) * 0.2 * speedScale;
                 this.noiseOffsetX = Math.random() * 1000;
                 this.noiseOffsetY = Math.random() * 1000;
-                // Адаптивный шум: разная амплитуда дрейфа
                 this.noiseScale = width <= 425 ? 0.008 : width <= 768 ? 0.005 : 0.004;
                 this.baseAlpha = Math.random() * 0.4 + 0.15;
                 this.pulsePhase = Math.random() * Math.PI * 2;
@@ -1275,25 +1260,20 @@
             update() {
                 this.trail.push({ x: this.x, y: this.y, alpha: this.baseAlpha * 0.5 });
                 if (this.trail.length > this.maxTrail) this.trail.shift();
-
                 const noiseX = noise2D(this.x * this.noiseScale + this.noiseOffsetX, this.y * this.noiseScale + this.noiseOffsetY + time * 0.0003);
                 const noiseY = noise2D(this.x * this.noiseScale + this.noiseOffsetX + 100, this.y * this.noiseScale + this.noiseOffsetY + time * 0.0003);
-                // Адаптивная сила шума
                 const noiseStrength = width <= 425 ? 0.35 : width <= 768 ? 0.3 : 0.25;
                 this.speedX = this.baseSpeedX + noiseX * noiseStrength;
                 this.speedY = this.baseSpeedY + noiseY * noiseStrength;
-
                 const maxSpeed = width <= 425 ? 0.5 : 0.45;
                 const speed = Math.sqrt(this.speedX ** 2 + this.speedY ** 2);
                 if (speed > maxSpeed) {
                     this.speedX = (this.speedX / speed) * maxSpeed;
                     this.speedY = (this.speedY / speed) * maxSpeed;
                 }
-
                 this.x += this.speedX;
                 this.y += this.speedY;
                 this.pulsePhase += this.pulseSpeed;
-
                 if (this.x < -30 || this.x > width + 30 || this.y < -30 || this.y > height + 30) {
                     this.reset(false);
                     this.trail = [];
@@ -1303,19 +1283,15 @@
                 const pulse = 0.5 + 0.5 * Math.sin(this.pulsePhase);
                 const glowAlpha = this.baseAlpha * (0.55 + pulse * 0.45);
                 const brightnessMultiplier = width <= 425 ? 1.4 : width <= 768 ? 1.15 : 1;
-
                 if (this.trail.length > 1) {
                     ctx.beginPath();
                     ctx.moveTo(this.trail[0].x, this.trail[0].y);
-                    for (let i = 1; i < this.trail.length; i++) {
-                        ctx.lineTo(this.trail[i].x, this.trail[i].y);
-                    }
+                    for (let i = 1; i < this.trail.length; i++) ctx.lineTo(this.trail[i].x, this.trail[i].y);
                     ctx.strokeStyle = `rgba(45, 212, 191, ${glowAlpha * 0.3})`;
                     ctx.lineWidth = this.size * 0.6;
                     ctx.lineCap = 'round';
                     ctx.stroke();
                 }
-
                 const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2.5);
                 gradient.addColorStop(0, `rgba(167, 243, 208, ${glowAlpha * 0.9 * brightnessMultiplier})`);
                 gradient.addColorStop(0.4, `rgba(45, 212, 191, ${glowAlpha * 0.6})`);
@@ -1324,7 +1300,6 @@
                 ctx.arc(this.x, this.y, this.size * 2.5, 0, Math.PI * 2);
                 ctx.fillStyle = gradient;
                 ctx.fill();
-
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size * 0.5, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255, 255, 255, ${glowAlpha * 0.6})`;
@@ -1333,9 +1308,7 @@
         }
 
         class WildParticle {
-            constructor() {
-                this.reset();
-            }
+            constructor() { this.reset(); }
             reset() {
                 const edge = Math.floor(Math.random() * 4);
                 switch(edge) {
@@ -1361,9 +1334,7 @@
                 this.curvePhase += this.curveSpeed;
                 this.x += this.speedX + Math.sin(this.curvePhase) * this.curveAmp;
                 this.y += this.speedY + Math.cos(this.curvePhase * 1.3) * this.curveAmp;
-                if (this.life > this.maxLife || this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) {
-                    this.reset();
-                }
+                if (this.life > this.maxLife || this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) this.reset();
             }
             draw() {
                 const lifeRatio = this.life / this.maxLife;
@@ -1381,9 +1352,7 @@
         }
 
         class Sparkle {
-            constructor() {
-                this.reset();
-            }
+            constructor() { this.reset(); }
             reset() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
@@ -1399,11 +1368,8 @@
                 this.life++;
                 this.phase += this.blinkSpeed;
                 const lifeRatio = this.life / this.maxLife;
-                if (lifeRatio < 0.12) {
-                    this.alpha = lifeRatio / 0.12;
-                } else {
-                    this.alpha = 1 - ((lifeRatio - 0.12) / 0.88);
-                }
+                if (lifeRatio < 0.12) this.alpha = lifeRatio / 0.12;
+                else this.alpha = 1 - ((lifeRatio - 0.12) / 0.88);
                 const twinkle = 0.5 + 0.5 * Math.sin(this.phase * 3);
                 this.alpha *= (0.5 + twinkle * 0.5);
                 this.alpha = Math.max(0, Math.min(0.75, this.alpha));
@@ -1420,7 +1386,6 @@
                 ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
                 ctx.fillStyle = gradient;
                 ctx.fill();
-
                 const crossAlpha = this.alpha * 0.4;
                 if (crossAlpha > 0.04) {
                     ctx.strokeStyle = `rgba(255, 255, 255, ${crossAlpha})`;
@@ -1467,26 +1432,13 @@
             if (!ctx) return;
             time++;
             ctx.clearRect(0, 0, width, height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-            }
-            for (let i = 0; i < wildParticles.length; i++) {
-                wildParticles[i].update();
-                wildParticles[i].draw();
-            }
-            for (let i = 0; i < sparkles.length; i++) {
-                sparkles[i].update();
-                sparkles[i].draw();
-            }
+            for (let i = 0; i < particles.length; i++) { particles[i].update(); particles[i].draw(); }
+            for (let i = 0; i < wildParticles.length; i++) { wildParticles[i].update(); wildParticles[i].draw(); }
+            for (let i = 0; i < sparkles.length; i++) { sparkles[i].update(); sparkles[i].draw(); }
             animationId = requestAnimationFrame(animate);
         }
 
-        function handleResize() {
-            resize();
-            initParticles();
-        }
-
+        function handleResize() { resize(); initParticles(); }
         window.addEventListener('resize', handleResize);
         window.addEventListener('orientationchange', () => setTimeout(handleResize, 100));
         resize();
